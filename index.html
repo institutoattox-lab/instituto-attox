@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Instituto Atto-X — Método FGB 360°</title>
+<meta name="description" content="Branding simbólico, IA aplicada e engenharia de contexto. Método FGB 360° — crie marcas que não precisam competir. Instituto Atto-X, Goiânia.">
+<meta name="keywords" content="Instituto Atto-X, Branding, IA Aplicada, Engenharia de Contexto, Método FGB 360°, Goiânia, Clone IA, Agentes IA, Consultoria Estratégica, Mentoria">
+<meta name="author" content="Instituto Atto-X">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#0a0e14">
+<meta property="og:title" content="Instituto Atto-X — Prompt é comando. Contexto é sistema.">
+<meta property="og:description" content="Branding simbólico + IA aplicada. Método FGB 360°. Ebook gratuito.">
+<meta property="og:url" content="https://institutoattox-lab.github.io/instituto-attox/">
+<meta property="og:site_name" content="Instituto Atto-X">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Instituto Atto-X — Prompt é comando. Contexto é sistema.">
+<meta name="twitter:description" content="Branding simbólico + IA aplicada. Método FGB 360°. Ebook gratuito.">
+<meta name="twitter:site" content="@institutoattox">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230a0e14'/%3E%3Ctext x='32' y='45' font-family='Arial,Helvetica,sans-serif' font-size='36' font-weight='700' fill='%23e8a33d' text-anchor='middle'%3EX%3C/text%3E%3C/svg%3E">
+<style>
+:root{
+  /* ATTO-X DESIGN TOKENS — spec: attox-design.md (FGB 360°) */
+  --bg:#0a0e14; --bg-2:#0f1621;
+  --surface:#121a26; --surface-2:#18222f;
+  --line:rgba(217,164,74,.14); --line-strong:rgba(232,163,61,.32);
+  --text:#f4ede0; --text-2:#b8ad98; --text-3:#7d7461;
+  --accent:#e8a33d; --accent-2:#d9744a;
+  --accent-soft:rgba(232,163,61,.12);
+  --success:#30d158;
+  --ink:#1a1206;
+  --font-h1:clamp(44px,8.5vw,92px);
+  --font-h2:clamp(30px,4.8vw,52px);
+  --font-h3:clamp(21px,2.4vw,24px);
+  --font-lead:clamp(18px,2.4vw,26px);
+  --tracking-tight:-.045em; --tracking-snug:-.022em; --tracking-wide:.09em;
+  --section-y:clamp(80px,11vw,120px);
+  --gutter:clamp(20px,5vw,24px);
+  --radius:28px; --radius-md:20px; --radius-sm:12px; --radius-pill:980px;
+  --ease-out:cubic-bezier(.2,.8,.2,1);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+section,header{scroll-margin-top:60px}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Helvetica Neue",Inter,Arial,sans-serif;
+  background:var(--bg);color:var(--text);
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
+  line-height:1.47;overflow-x:hidden;
+}
+::selection{background:var(--accent);color:var(--ink)}
+a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:6px}
+
+/* SCROLL PROGRESS */
+.progress{position:fixed;top:0;left:0;height:2px;width:0;background:var(--accent);z-index:200;transition:width .1s linear}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:150;backdrop-filter:saturate(180%) blur(20px);-webkit-backdrop-filter:saturate(180%) blur(20px);background:rgba(10,14,20,.76);border-bottom:1px solid var(--line)}
+.nav-inner{max-width:1060px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:52px;padding:0 var(--gutter)}
+.logo{font-size:17px;font-weight:600;letter-spacing:var(--tracking-snug);text-decoration:none;color:var(--text);flex-shrink:0}
+.logo span{color:var(--accent)}
+.nav-links{display:flex;gap:28px;list-style:none;align-items:center}
+.nav-links a{font-size:12.5px;color:var(--text-2);text-decoration:none;transition:color .25s;white-space:nowrap}
+.nav-links a:hover{color:var(--text)}
+.nav-cta{font-size:12.5px;color:var(--ink);background:var(--accent);padding:6px 15px;border-radius:var(--radius-pill);text-decoration:none;font-weight:600;transition:opacity .25s;white-space:nowrap}
+.nav-cta:hover{opacity:.85}
+.burger{display:none;background:none;border:none;cursor:pointer;padding:8px;flex-direction:column;gap:5px}
+.burger span{display:block;width:20px;height:1.5px;background:var(--text);transition:transform .3s var(--ease-out),opacity .2s}
+.burger.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+.burger.open span:nth-child(2){opacity:0}
+.burger.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+@media(max-width:860px){
+  .burger{display:flex}
+  .nav-links{
+    position:fixed;top:52px;left:0;right:0;
+    flex-direction:column;align-items:flex-start;gap:0;
+    background:rgba(10,14,20,.98);backdrop-filter:blur(20px);
+    border-bottom:1px solid var(--line);
+    max-height:0;overflow:hidden;transition:max-height .4s var(--ease-out);
+  }
+  .nav-links.open{max-height:340px}
+  .nav-links li{width:100%;border-bottom:1px solid var(--line)}
+  .nav-links a{display:block;padding:16px var(--gutter);font-size:15px}
+  .nav-cta{display:none}
+}
+
+/* HERO */
+.hero{min-height:100svh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:110px var(--gutter) 70px;position:relative;overflow:hidden}
+.hero::before{
+  content:"";position:absolute;top:42%;left:50%;transform:translate(-50%,-50%);
+  width:1000px;height:1000px;max-width:150vw;max-height:150vw;
+  background:radial-gradient(circle,rgba(232,163,61,.17),rgba(217,116,74,.055) 36%,transparent 64%);
+  pointer-events:none;
+}
+.hero::after{
+  content:"";position:absolute;top:42%;left:50%;transform:translate(-50%,-50%);
+  width:min(760px,120vw);aspect-ratio:1;border-radius:50%;
+  border:1px solid rgba(232,163,61,.07);
+  box-shadow:0 0 0 60px rgba(232,163,61,.028),0 0 0 128px rgba(232,163,61,.016);
+  pointer-events:none;
+}
+.hero>*{position:relative;z-index:1}
+.eyebrow{font-size:12.5px;font-weight:600;color:var(--accent);letter-spacing:var(--tracking-wide);text-transform:uppercase;margin-bottom:18px}
+h1{font-size:var(--font-h1);font-weight:700;letter-spacing:var(--tracking-tight);line-height:1.02;max-width:15ch;text-wrap:balance}
+.hero .sub{font-size:var(--font-lead);color:var(--text-2);font-weight:400;letter-spacing:-.015em;max-width:36ch;margin-top:22px;text-wrap:balance}
+.hero-ctas{display:flex;gap:14px;margin-top:38px;flex-wrap:wrap;justify-content:center}
+.btn{font-size:17px;font-weight:500;text-decoration:none;padding:13px 27px;border-radius:var(--radius-pill);transition:transform .3s var(--ease-out),opacity .25s;display:inline-block}
+.btn:active{transform:scale(.97)}
+.btn-primary{background:var(--accent);color:var(--ink);font-weight:600}
+.btn-primary:hover{opacity:.9;transform:translateY(-1px)}
+.btn-ghost{color:var(--accent);border:1px solid var(--line-strong)}
+.btn-ghost:hover{background:var(--accent-soft)}
+.btn-whats{background:var(--success);color:#03140a;font-weight:600}
+.btn-whats:hover{opacity:.9;transform:translateY(-1px)}
+
+/* SECTIONS */
+section{padding:var(--section-y) var(--gutter)}
+.wrap{max-width:1060px;margin:0 auto}
+.section-head{max-width:680px;margin-bottom:clamp(38px,5vw,56px)}
+.section-head .eyebrow{margin-bottom:12px}
+h2{font-size:var(--font-h2);font-weight:700;letter-spacing:-.035em;line-height:1.07;text-wrap:balance}
+.section-head p{font-size:clamp(16px,2vw,19px);color:var(--text-2);margin-top:16px;letter-spacing:-.01em;max-width:56ch}
+.accent{color:var(--accent)}
+
+/* BENTO */
+.bento{display:grid;gap:14px;grid-template-columns:repeat(6,1fr)}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:clamp(28px,3.4vw,36px) clamp(24px,3vw,32px);position:relative;overflow:hidden;transition:transform .5s var(--ease-out),border-color .4s}
+.card:hover{transform:translateY(-4px);border-color:var(--line-strong)}
+.card::before{content:"";position:absolute;inset:0;background:radial-gradient(420px circle at var(--mx,50%) var(--my,50%),var(--accent-soft),transparent 62%);opacity:0;transition:opacity .4s;pointer-events:none}
+.card:hover::before{opacity:1}
+.card .tag{font-size:11.5px;font-weight:600;color:var(--accent);text-transform:uppercase;letter-spacing:var(--tracking-wide)}
+.card h3{font-size:var(--font-h3);font-weight:600;letter-spacing:var(--tracking-snug);margin:12px 0 10px;line-height:1.2}
+.card p{font-size:15px;color:var(--text-2);letter-spacing:-.005em}
+.card .link{display:inline-block;margin-top:20px;font-size:15px;color:var(--accent);text-decoration:none}
+.card .link:hover{text-decoration:underline}
+.span-6{grid-column:span 6}.span-3{grid-column:span 3}
+.card.feature{background:linear-gradient(152deg,#16202e 0%,#1b1710 100%);padding:clamp(34px,4vw,48px) clamp(26px,3.4vw,40px)}
+.card.feature h3{font-size:clamp(26px,3.4vw,34px);letter-spacing:-.03em}
+.card.feature p{font-size:clamp(15px,1.9vw,17px);max-width:46ch}
+@media(max-width:820px){.span-3{grid-column:span 6}}
+
+/* EBOOK */
+.ebook-panel{display:grid;grid-template-columns:1.12fr .88fr;gap:clamp(30px,4vw,48px);background:linear-gradient(152deg,#131d2b 0%,#1d1810 100%);border:1px solid var(--line);border-radius:var(--radius);padding:clamp(34px,4.4vw,56px) clamp(26px,3.6vw,48px);align-items:center}
+.ebook-sub{font-size:clamp(15px,1.9vw,17px);color:var(--text-2);margin-top:16px;max-width:52ch}
+.ebook-list{list-style:none;margin-top:26px;display:grid;gap:12px}
+.ebook-list li{font-size:15px;color:var(--text-2);padding-left:26px;position:relative}
+.ebook-list li::before{content:"✦";position:absolute;left:0;color:var(--accent)}
+.ebook-form-card{background:rgba(244,237,224,.035);border:1px solid var(--line);border-radius:var(--radius-md);padding:clamp(26px,3vw,32px) clamp(22px,2.6vw,28px);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px)}
+.form-title{font-size:21px;font-weight:600;letter-spacing:var(--tracking-snug)}
+.form-sub{font-size:14px;color:var(--text-2);margin:6px 0 22px}
+.field{margin-bottom:14px}
+.field label{display:block;font-size:11.5px;font-weight:600;color:var(--text-3);text-transform:uppercase;letter-spacing:.07em;margin-bottom:6px}
+.field input{width:100%;font-size:16px;font-family:inherit;color:var(--text);background:rgba(244,237,224,.05);border:1px solid var(--line);border-radius:var(--radius-sm);padding:12px 14px;outline:none;transition:border-color .25s,background .25s}
+.field input:focus{border-color:var(--accent);background:var(--accent-soft)}
+.field input::placeholder{color:var(--text-3)}
+.btn-full{width:100%;text-align:center;border:none;cursor:pointer;margin-top:6px;font-family:inherit}
+.form-note{font-size:12px;color:var(--text-3);margin-top:12px;text-align:center;transition:color .2s}
+@media(max-width:820px){.ebook-panel{grid-template-columns:1fr}}
+
+/* MÉTODO */
+.metodo-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
+.metodo-cell{background:var(--surface);padding:clamp(28px,3.2vw,36px) clamp(22px,2.6vw,28px);transition:background .35s}
+.metodo-cell:hover{background:var(--surface-2)}
+.metodo-cell .num{font-size:12.5px;font-weight:600;color:var(--accent);letter-spacing:.08em}
+.metodo-cell h4{font-size:20px;font-weight:600;letter-spacing:var(--tracking-snug);margin:10px 0 8px}
+.metodo-cell p{font-size:14px;color:var(--text-2)}
+@media(max-width:820px){.metodo-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.metodo-grid{grid-template-columns:1fr}}
+
+/* CURSO — módulos numerados */
+.mod-list{display:grid;gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
+.mod{display:grid;grid-template-columns:82px 1fr;background:var(--surface);align-items:baseline;padding:clamp(24px,3vw,32px) clamp(22px,3vw,34px);transition:background .35s}
+.mod:hover{background:var(--surface-2)}
+.mod .n{font-size:clamp(28px,4vw,40px);font-weight:700;color:var(--accent);letter-spacing:-.04em;line-height:1;opacity:.85}
+.mod h4{font-size:clamp(18px,2.2vw,21px);font-weight:600;letter-spacing:var(--tracking-snug);margin-bottom:6px}
+.mod p{font-size:15px;color:var(--text-2)}
+@media(max-width:520px){.mod{grid-template-columns:52px 1fr}}
+.soon{display:inline-flex;align-items:center;gap:8px;margin-top:30px;font-size:13px;font-weight:600;color:var(--accent);letter-spacing:var(--tracking-wide);text-transform:uppercase;border:1px solid var(--line-strong);border-radius:var(--radius-pill);padding:9px 18px}
+
+/* STATEMENT */
+.statement{text-align:center;padding:clamp(100px,14vw,150px) var(--gutter)}
+.statement h2{font-size:clamp(28px,4.6vw,50px);max-width:24ch;margin:0 auto}
+.statement h2 em{font-style:normal;color:var(--accent)}
+.statement .kicker{font-size:14px;color:var(--text-3);margin-top:22px;letter-spacing:.02em}
+
+/* FINAL */
+.final{text-align:center;background:linear-gradient(180deg,var(--bg),#130d06)}
+.final h2{max-width:19ch;margin:0 auto}
+.final p{font-size:clamp(16px,2vw,19px);color:var(--text-2);margin:18px auto 34px;max-width:46ch}
+
+/* FOOTER */
+footer{border-top:1px solid var(--line);padding:40px var(--gutter) 56px}
+.foot-inner{max-width:1060px;margin:0 auto;display:flex;justify-content:space-between;flex-wrap:wrap;gap:20px;font-size:12px;color:var(--text-3)}
+.foot-inner a{color:var(--text-2);text-decoration:none}
+.foot-inner a:hover{color:var(--text)}
+.foot-links{display:flex;gap:22px;flex-wrap:wrap}
+
+/* REVEAL */
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .8s ease,transform .8s var(--ease-out)}
+.reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none}*{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+
+<div class="progress" id="progress"></div>
+
+<nav>
+  <div class="nav-inner">
+    <a class="logo" href="#top">Atto<span>-X</span></a>
+    <ul class="nav-links" id="navlinks">
+      <li><a href="#solucoes">Soluções</a></li>
+      <li><a href="#ebook">Ebook grátis</a></li>
+      <li><a href="#metodo">Método FGB 360°</a></li>
+      <li><a href="#curso">Curso</a></li>
+      <li><a href="#mentoria">Mentoria</a></li>
+    </ul>
+    <a class="nav-cta" href="https://wa.me/5562993342271" target="_blank" rel="noopener">Falar agora</a>
+    <button class="burger" id="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <p class="eyebrow">Instituto Atto-X</p>
+  <h1>Prompt é comando. Contexto é <span class="accent">sistema</span>.</h1>
+  <p class="sub">Branding simbólico e IA aplicada para marcas que não precisam competir — elas criam a própria categoria.</p>
+  <div class="hero-ctas">
+    <a class="btn btn-primary" href="#ebook">Baixar o ebook grátis</a>
+    <a class="btn btn-ghost" href="#solucoes">Ver soluções</a>
+  </div>
+</header>
+
+<section id="solucoes">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow">Soluções</p>
+      <h2>Cinco frentes. Um objetivo: resultado.</h2>
+      <p>Cada oferta resolve um gargalo real de posicionamento, produtividade ou receita.</p>
+    </div>
+    <div class="bento">
+      <div class="card feature span-6 reveal">
+        <p class="tag">IA Aplicada</p>
+        <h3>Clones e agentes de IA</h3>
+        <p>Seu conhecimento operando 24/7. Clones de atendimento, agentes comerciais e automações que reduzem custo e multiplicam capacidade — implantados no seu negócio, com a sua voz.</p>
+        <a class="link" href="https://wa.me/5562993342271" target="_blank" rel="noopener">Solicitar diagnóstico ›</a>
+      </div>
+      <div class="card span-3 reveal">
+        <p class="tag">Estratégia</p>
+        <h3>Consultoria Estratégica</h3>
+        <p>Diagnóstico cirúrgico de marca e operação. Decisões baseadas em assimetria, não em achismo.</p>
+        <a class="link" href="https://wa.me/5562993342271" target="_blank" rel="noopener">Agendar ›</a>
+      </div>
+      <div class="card span-3 reveal">
+        <p class="tag">Educação</p>
+        <h3>Workshops de IA</h3>
+        <p>Treinamentos presenciais e in-company em Goiânia. Do zero à aplicação prática em 90 minutos.</p>
+        <a class="link" href="https://wa.me/5562993342271" target="_blank" rel="noopener">Levar para minha empresa ›</a>
+      </div>
+      <div class="card span-3 reveal">
+        <p class="tag">Frameworks</p>
+        <h3>Ebooks e métodos</h3>
+        <p>O Método FGB 360° e a Engenharia de Contexto documentados — para executar sem depender de ninguém.</p>
+        <a class="link" href="#ebook">Baixar ebook ›</a>
+      </div>
+      <div class="card span-3 reveal">
+        <p class="tag">Acompanhamento</p>
+        <h3>Mentoria Individual</h3>
+        <p>Acesso direto. Estratégia aplicada ao seu caso, com metas, prazos e cobrança de execução.</p>
+        <a class="link" href="#mentoria">Como funciona ›</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="ebook">
+  <div class="wrap">
+    <div class="ebook-panel reveal">
+      <div class="ebook-copy">
+        <p class="eyebrow">Ebook gratuito</p>
+        <h2>Sua marca não está competindo. Está <span class="accent">desaparecendo</span>.</h2>
+        <p class="ebook-sub">Mais de 10 mil marcas nascem por dia. A maioria morre invisível — não por falta de qualidade, mas por falta de presença simbólica. O FGB 360° é o método para criar marcas que se tornam a própria categoria.</p>
+        <ul class="ebook-list">
+          <li>O Oceano Roxo — torne-se sinônimo de uma categoria</li>
+          <li>Inteligência Simbólica — a nova moeda do branding</li>
+          <li>Engenharia de Prompts — IA como multiplicador de execução</li>
+          <li>Framework de 30 dias — do diagnóstico ao ecossistema</li>
+        </ul>
+      </div>
+      <div class="ebook-form-card">
+        <p class="form-title">Baixe agora. É grátis.</p>
+        <p class="form-sub">Receba o ebook completo + pack de bônus.</p>
+        <div class="field">
+          <label for="lead-nome">Nome</label>
+          <input id="lead-nome" type="text" placeholder="Seu nome" autocomplete="name">
+        </div>
+        <div class="field">
+          <label for="lead-email">E-mail</label>
+          <input id="lead-email" type="email" placeholder="Seu melhor e-mail" autocomplete="email" inputmode="email">
+        </div>
+        <button class="btn btn-primary btn-full" id="lead-btn" type="button">Quero o ebook FGB 360°</button>
+        <p class="form-note" id="lead-note">Enviamos no seu e-mail. Sem spam, cancele quando quiser.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="statement">
+  <h2 class="reveal">Marcas invisíveis competem.<br>Marcas inevitáveis <em>criam</em>.</h2>
+</section>
+
+<section id="metodo">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow">Método FGB 360°</p>
+      <h2>Quatro movimentos. Nenhum desperdício.</h2>
+      <p>Do diagnóstico à prova de resultado — o sistema que transforma marca em organismo vivo.</p>
+    </div>
+    <div class="metodo-grid reveal">
+      <div class="metodo-cell"><p class="num">I</p><h4>Diagnóstico</h4><p>Leitura profunda da marca, do mercado e das assimetrias exploráveis.</p></div>
+      <div class="metodo-cell"><p class="num">II</p><h4>Visão</h4><p>Posicionamento no Oceano Roxo — onde a concorrência se torna irrelevante.</p></div>
+      <div class="metodo-cell"><p class="num">III</p><h4>Execução</h4><p>Inteligência Simbólica e IA aplicadas em ativos que vendem.</p></div>
+      <div class="metodo-cell"><p class="num">IV</p><h4>Prova e Ação</h4><p>Métricas, iteração e escala. O que não gera resultado, sai.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="simbolica">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow">Inteligência Simbólica</p>
+      <h2>Marcas não vendem produtos. Vendem símbolos de identidade.</h2>
+      <p>Toda decisão de compra é emocional. Construímos significado em quatro camadas — não apenas mensagens.</p>
+    </div>
+    <div class="bento">
+      <div class="card span-3 reveal"><p class="tag">Nível 1</p><h3>Símbolo visual</h3><p>Cores, formas, tipografia. A primeira impressão que já comunica valor.</p></div>
+      <div class="card span-3 reveal"><p class="tag">Nível 2</p><h3>Símbolo verbal</h3><p>Tom de voz, narrativas, manifestos. A linguagem que cria pertencimento.</p></div>
+      <div class="card span-3 reveal"><p class="tag">Nível 3</p><h3>Símbolo experiencial</h3><p>Como a marca se comporta em cada ponto de contato. Coerência que vira confiança.</p></div>
+      <div class="card span-3 reveal"><p class="tag">Nível 4</p><h3>Símbolo cultural</h3><p>Como a marca se posiciona frente aos valores da sociedade. Onde nasce a lealdade fanática.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="curso">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow">Curso · Em breve</p>
+      <h2>Engenharia de Contexto para quem cria.</h2>
+      <p>Não é a IA que é genérica. É o contexto que você não montou. Quatro módulos para parar de gritar comando e começar a construir sistema.</p>
+    </div>
+    <div class="mod-list reveal">
+      <div class="mod"><span class="n">01</span><div><h4>Identidade</h4><p>Como injetar DNA numa máquina. O fim do texto sem alma.</p></div></div>
+      <div class="mod"><span class="n">02</span><div><h4>Conhecimento</h4><p>Seus dados no lugar certo viram resposta cirúrgica. Bagunça vira resposta genérica.</p></div></div>
+      <div class="mod"><span class="n">03</span><div><h4>Memória &amp; Ferramentas</h4><p>Agentes que lembram e agem. O resto é chatbot decorativo.</p></div></div>
+      <div class="mod"><span class="n">04</span><div><h4>Sistema</h4><p>Tokenizado, documentado, replicável. Porque genialidade que não repete tem outro nome: sorte.</p></div></div>
+    </div>
+    <div class="reveal"><span class="soon">⚡ Lançamento em breve</span></div>
+  </div>
+</section>
+
+<section id="contexto">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow">Engenharia de Contexto</p>
+      <h2>Tudo é manipulação de dados.</h2>
+      <p>Sua marca, seu texto, sua campanha, a IA. Quem organiza os dados certos, na ordem certa, ganha. Arquitetamos o ambiente inteiro que a IA enxerga.</p>
+    </div>
+    <div class="bento">
+      <div class="card span-3 reveal"><p class="tag">Camada 1</p><h3>Identidade</h3><p>O DNA simbólico da marca injetado na IA. Um clone que fala como você, não como um robô genérico.</p></div>
+      <div class="card span-3 reveal"><p class="tag">Camada 2</p><h3>Conhecimento</h3><p>Documentos, ofertas e objeções no contexto certo, na hora certa. A resposta deixa de ser plausível e passa a ser precisa.</p></div>
+      <div class="card span-3 reveal"><p class="tag">Camada 3</p><h3>Memória e ferramentas</h3><p>Agentes que lembram do cliente, consultam agenda e CRM — e agem. Contexto vivo, não estático.</p></div>
+      <div class="card span-3 reveal"><p class="tag">Camada 4</p><h3>Design System</h3><p>O mesmo princípio, no visual: tokens que garantem consistência cirúrgica em qualquer canal — como este site.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="statement">
+  <h2 class="reveal">Comando obedece.<br>Sistema <em>escala</em>.</h2>
+  <p class="kicker reveal">Prompt é comando. Engenharia de contexto é sistema.</p>
+</section>
+
+<section class="final" id="mentoria">
+  <div class="wrap reveal" style="text-align:center">
+    <p class="eyebrow">Mentoria Individual</p>
+    <h2>Um estrategista do seu lado.</h2>
+    <p>15+ anos em design, branding e IA aplicada. Vagas limitadas — o próximo passo é uma conversa direta, sem enrolação.</p>
+    <a class="btn btn-whats" href="https://wa.me/5562993342271?text=Quero%20saber%20mais%20sobre%20a%20mentoria%20Atto-X" target="_blank" rel="noopener">Iniciar conversa no WhatsApp</a>
+  </div>
+</section>
+
+<footer>
+  <div class="foot-inner">
+    <div>© 2026 Instituto Atto-X · Goiânia, GO</div>
+    <div class="foot-links">
+      <a href="https://instagram.com/institutoattox" target="_blank" rel="noopener">@institutoattox</a>
+      <a href="https://instagram.com/manoelnettopro" target="_blank" rel="noopener">@manoelnettopro</a>
+      <a href="https://linktr.ee/institutoattox" target="_blank" rel="noopener">linktr.ee</a>
+      <a href="https://wa.me/5562993342271" target="_blank" rel="noopener">WhatsApp</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+// reveal
+const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.1});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+// scroll progress
+const bar=document.getElementById('progress');
+addEventListener('scroll',()=>{
+  const h=document.documentElement;
+  const pct=h.scrollTop/(h.scrollHeight-h.clientHeight)*100;
+  bar.style.width=pct+'%';
+},{passive:true});
+
+// mobile nav
+const burger=document.getElementById('burger'),links=document.getElementById('navlinks');
+burger.addEventListener('click',()=>{
+  const open=links.classList.toggle('open');
+  burger.classList.toggle('open',open);
+  burger.setAttribute('aria-expanded',open);
+});
+links.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{
+  links.classList.remove('open');burger.classList.remove('open');burger.setAttribute('aria-expanded','false');
+}));
+
+/* ===================================================================
+   CAPTURA DE LEAD — CONFIGURAÇÃO (leia antes de publicar)
+   -------------------------------------------------------------------
+   1) Crie conta grátis em https://formspree.io  → New Form
+   2) Copie o ID do form (ex: "xbljkqwe") e cole em FORM_ID abaixo
+   3) Hospede o PDF do ebook (Google Drive/Dropbox com link público,
+      ou junto do site) e cole a URL em EBOOK_URL
+   Enquanto FORM_ID estiver vazio, o envio cai no WhatsApp (fallback).
+   =================================================================== */
+const FORM_ID   = '';                        // ex: 'xbljkqwe'
+const EBOOK_URL = 'https://institutoattox-lab.github.io/instituto-attox/ebook-fgb-360.pdf';       // caminho ou link público do PDF
+
+const leadBtn=document.getElementById('lead-btn');
+const note=document.getElementById('lead-note');
+function setNote(txt,color){note.textContent=txt;note.style.color=color}
+
+leadBtn.addEventListener('click',async()=>{
+  const nome=document.getElementById('lead-nome').value.trim();
+  const email=document.getElementById('lead-email').value.trim();
+  if(!nome) return setNote('Informe seu nome para continuar.','#d9744a');
+  if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) return setNote('Informe um e-mail válido para continuar.','#d9744a');
+
+  // Fallback: sem Formspree configurado, envia pelo WhatsApp
+  if(!FORM_ID){
+    setNote('Abrindo o WhatsApp…','#30d158');
+    window.open('https://wa.me/5562993342271?text='+encodeURIComponent(`Quero baixar o ebook FGB 360°.\nNome: ${nome}\nE-mail: ${email}`),'_blank');
+    return;
+  }
+
+  leadBtn.disabled=true; leadBtn.style.opacity='.6';
+  leadBtn.textContent='Enviando…';
+  setNote('Registrando seu acesso…','#b8ad98');
+  try{
+    const r=await fetch('https://formspree.io/f/'+FORM_ID,{
+      method:'POST',
+      headers:{'Content-Type':'application/json','Accept':'application/json'},
+      body:JSON.stringify({nome,email,origem:'Site Atto-X — Ebook FGB 360°'})
+    });
+    if(!r.ok) throw new Error('falha');
+    leadBtn.textContent='✓ Pronto! Baixando…';
+    setNote('Confira seu e-mail — o material também está no seu download.','#30d158');
+    const a=document.createElement('a');
+    a.href=EBOOK_URL; a.download='Metodo-FGB-360-Instituto-Atto-X.pdf';
+    document.body.appendChild(a); a.click(); a.remove();
+  }catch(err){
+    leadBtn.disabled=false; leadBtn.style.opacity='1';
+    leadBtn.textContent='Quero o ebook FGB 360°';
+    setNote('Não consegui enviar. Toque aqui para receber pelo WhatsApp.','#d9744a');
+    note.style.cursor='pointer';
+    note.onclick=()=>window.open('https://wa.me/5562993342271?text='+encodeURIComponent(`Quero o ebook FGB 360°.\nNome: ${nome}\nE-mail: ${email}`),'_blank');
+  }
+});
+
+// spotlight
+if(matchMedia('(hover:hover)').matches){
+  document.querySelectorAll('.card').forEach(c=>{
+    c.addEventListener('pointermove',e=>{
+      const r=c.getBoundingClientRect();
+      c.style.setProperty('--mx',(e.clientX-r.left)+'px');
+      c.style.setProperty('--my',(e.clientY-r.top)+'px');
+    });
+  });
+}
+</script>
+</body>
+</html>
