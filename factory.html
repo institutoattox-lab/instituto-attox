@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>I.A.D.T.X Factory — Client Compiler</title>
+<meta name="description" content="Console demonstrativo da I.A.D.T.X Factory: materiais brutos em CORE soberano, versionado e portável.">
+<style>
+:root{--bg:#050406;--panel:#100b0b;--line:#34211b;--ink:#f6f2ec;--dim:#aaa09a;--orange:#ff5c1a;--cyan:#41b9db}*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 70% -10%,#391307 0,transparent 34%),var(--bg);color:var(--ink);font-family:Inter,system-ui,sans-serif;line-height:1.5}main{width:min(1120px,calc(100% - 28px));margin:auto;padding:28px 0 72px}nav{display:flex;justify-content:space-between;align-items:center;padding:12px 0 42px}.brand{font-family:Georgia,serif;color:var(--orange);font-size:24px;letter-spacing:.12em}.back,a{color:var(--ink);text-decoration:none}.back{border:1px solid var(--line);border-radius:999px;padding:10px 16px}.hero{display:grid;grid-template-columns:1.15fr .85fr;gap:18px}.card{background:linear-gradient(145deg,rgba(255,255,255,.045),rgba(255,255,255,.018));border:1px solid var(--line);border-radius:26px;padding:clamp(24px,4vw,42px)}.k{font:600 11px ui-monospace,monospace;letter-spacing:.22em;text-transform:uppercase;color:#ff9468}h1{font-size:clamp(38px,7vw,72px);line-height:.98;letter-spacing:-.055em;margin:18px 0}h1 em{font-family:Georgia,serif;font-weight:400;color:var(--orange)}p{color:var(--dim)}.flow{display:flex;gap:8px;flex-wrap:wrap;margin-top:28px}.flow span{font:11px ui-monospace,monospace;border:1px solid var(--line);padding:9px 11px;border-radius:999px}.status{display:grid;gap:10px;margin-top:20px}.row{display:flex;justify-content:space-between;padding:12px 0;border-bottom:1px solid var(--line);gap:20px}.ok{color:#79d7a5}.ready{color:#f7b06d}.demo{margin-top:18px;display:grid;grid-template-columns:1fr .8fr;gap:18px}textarea{width:100%;min-height:340px;background:#080607;color:#e9e1dc;border:1px solid var(--line);border-radius:16px;padding:18px;font:13px/1.55 ui-monospace,monospace;resize:vertical}button{width:100%;border:0;border-radius:999px;background:linear-gradient(135deg,var(--orange),#cb3500);color:white;font-weight:750;padding:15px 20px;cursor:pointer;margin-top:12px}.result{min-height:340px}.result ul{padding-left:20px;color:var(--dim)}.note{font-size:12px;color:#847b76}.badge{display:inline-flex;border:1px solid #175267;color:#7dd9f0;border-radius:999px;padding:7px 11px;font:11px ui-monospace,monospace}.error{color:#ff8f8f}@media(max-width:780px){.hero,.demo{grid-template-columns:1fr}h1{font-size:48px}}
+</style>
+</head>
+<body><main>
+<nav><span class="brand">I.A.D.T.X</span><a class="back" href="./">Voltar ao site</a></nav>
+<section class="hero">
+  <div class="card"><span class="k">Factory · Client Compiler v0.5.0</span><h1>A arquitetura fica.<br><em>O motor troca.</em></h1><p>A Factory transforma materiais do cliente em um CORE versionado, governado e portável. A execução completa gera arquivos Markdown/JSON, manifesto, checksums e ZIP soberano.</p><div class="flow"><span>INGESTÃO</span><span>DIAGNÓSTICO</span><span>ARTEFATOS</span><span>VALIDAÇÃO</span><span>APROVAÇÃO HUMANA</span><span>CORE</span></div></div>
+  <div class="card"><span class="k">Estado real das integrações</span><div class="status"><div class="row"><span>Compiler local</span><strong class="ok">Operacional</strong></div><div class="row"><span>Pacote soberano ZIP</span><strong class="ok">Validado</strong></div><div class="row"><span>GitHub / Drive</span><strong class="ready">Via conectores autorizados</strong></div><div class="row"><span>MCP / LLMs</span><strong class="ready">Adapters preparados</strong></div></div><p class="note">Nenhuma integração desconectada é apresentada como operacional.</p></div>
+</section>
+<section class="demo">
+  <div class="card"><span class="k">Demonstração segura no navegador</span><h2>Compile um briefing sem enviar dados</h2><p>O processamento ocorre neste navegador. Use apenas dados demonstrativos.</p><textarea id="input" spellcheck="false">{
+  "client": {
+    "name": "Satélite Aurora",
+    "purpose": "Organizar atendimento e conhecimento",
+    "voice": ["clara", "humana", "objetiva"],
+    "principles": ["clareza antes de automação", "aprovação humana"]
+  },
+  "processes": ["triagem", "proposta", "acompanhamento"]
+}</textarea><button id="compile">Compilar CORE demonstrativo</button></div>
+  <div class="card result"><span class="badge">CASE FICTÍCIO · SEM DADOS EXTERNOS</span><h2 id="title">Aguardando briefing</h2><p id="message">A versão web gera um bundle JSON para demonstração. A versão CLI validada gera o ZIP soberano completo.</p><ul id="files"></ul><button id="download" hidden>Baixar bundle demonstrativo</button></div>
+</section>
+</main>
+<script>
+const names=['BRAND.md','DESIGN.md','POSITIONING.md','MEMORY.md','PROMPT.md','PROMPT_SYSTEM.md','GOVERNANCE.md','SYSTEM_PROMPT.md','ARCHITECTURE.md','SKILLS.md','HARNESS.md','INTEGRATIONS.md'];
+let bundle=null;const esc=s=>String(s??'Não informado');
+document.querySelector('#compile').onclick=async()=>{const title=document.querySelector('#title'),msg=document.querySelector('#message'),list=document.querySelector('#files'),download=document.querySelector('#download');try{const d=JSON.parse(document.querySelector('#input').value);if(!d.client?.name)throw Error('client.name é obrigatório');const now=new Date().toISOString();const core={};for(const n of names)core[n]=`# ${d.client.name}\n\nArtefato ${n} compilado pela I.A.D.T.X Factory v0.5.0.\n\nPropósito: ${esc(d.client.purpose)}\n`;bundle={schema:'iadtx.web-demo.bundle.v1',factory_version:'0.5.0',stage:'awaiting_human_approval',created_at:now,client:d.client,processes:d.processes||[],core};const raw=new TextEncoder().encode(JSON.stringify(bundle));const hash=[...new Uint8Array(await crypto.subtle.digest('SHA-256',raw))].map(x=>x.toString(16).padStart(2,'0')).join('');bundle.sha256=hash;title.textContent='CORE demonstrativo compilado';msg.textContent='Gate: aguardando aprovação humana. SHA-256: '+hash;list.innerHTML=names.map(n=>`<li>${n}</li>`).join('');download.hidden=false;title.className='';}catch(e){title.textContent='Briefing inválido';title.className='error';msg.textContent=e.message;list.innerHTML='';download.hidden=true;}};
+document.querySelector('#download').onclick=()=>{const blob=new Blob([JSON.stringify(bundle,null,2)],{type:'application/json'}),a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='iadtx-core-demo-v0.5.0.json';a.click();URL.revokeObjectURL(a.href)};
+</script></body></html>
