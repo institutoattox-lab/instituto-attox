@@ -1,0 +1,10 @@
+IADTX DEPLOY PROOF
+repository: institutoattox-lab/instituto-attox
+branch: gh-pages
+source_commit: 75e3a379ac5ab0e8fb8742657c2cb866862bb3f5
+index_blob: 6b82ef6c75233ce9991ecbc1aa8b077d4de0077c
+factory_blob: d90e85ecaa7bf7bb26f5115fd54e243305ab6beb
+index_factory_html_links: 0
+fgb_text: seis frentes que vao do diagnostico a prova medida
+factory_robots: noindex, nofollow
+purpose: public independent deployment verification
