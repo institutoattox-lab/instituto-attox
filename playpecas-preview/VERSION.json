@@ -1,0 +1,13 @@
+{
+  "product": "PlayPeças preview",
+  "version": "0.4.1-live",
+  "status": "AUDIT_PREVIEW",
+  "published_at": "2026-09-26",
+  "channel": "GitHub Pages / gh-pages",
+  "path": "/playpecas-preview/",
+  "design_source": "I.A.D.T.X DESIGN.md + user-provided visual references",
+  "governance": {
+    "robots": "noindex,nofollow",
+    "main_branch_untouched": true
+  }
+}
