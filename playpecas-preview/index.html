@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#050406">
+<title>PlayPeças — Preview Vivo · I.A.D.T.X</title>
+<meta name="description" content="Preview demonstrativo da evolução da experiência PlayPeças, criado no contexto da auditoria I.A.D.T.X.">
+<style>
+:root{--ink:#050406;--s1:#0c0a10;--s2:#141019;--fire:#ff5c1a;--fire2:#ff8a3d;--cyan:#41b9db;--cream:#f2ede2;--muted:#948c9a;--line:rgba(255,255,255,.11);--glass:rgba(9,12,17,.63);--r:26px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--ink);color:var(--cream);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Arial,sans-serif;line-height:1.45;overflow-x:hidden}
+a{color:inherit;text-decoration:none}button,a{ -webkit-tap-highlight-color:transparent}
+.bg{position:fixed;inset:-5%;z-index:-5;background:
+linear-gradient(180deg,rgba(5,4,6,.38),rgba(5,4,6,.94) 74%),
+radial-gradient(circle at 68% 18%,rgba(65,185,219,.14),transparent 33%),
+radial-gradient(circle at 26% 20%,rgba(255,92,26,.13),transparent 34%),
+url("data:image/webp;base64,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") center/cover no-repeat;filter:saturate(.9) contrast(1.05);transform:scale(1.08);will-change:transform}
+.bg::after{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.018) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.018) 1px,transparent 1px);background-size:64px 64px;mask-image:linear-gradient(to bottom,black,transparent 80%)}
+.lines{position:fixed;inset:0;z-index:-3;pointer-events:none;opacity:.55}
+.lines i{position:absolute;width:46vw;height:1px;background:linear-gradient(90deg,transparent,var(--fire),var(--cyan),transparent);filter:blur(.2px);animation:drift 11s linear infinite}
+.lines i:nth-child(1){top:18%;left:-25%;transform:rotate(-8deg)}.lines i:nth-child(2){top:42%;right:-18%;animation-delay:-3s;transform:rotate(11deg)}.lines i:nth-child(3){top:70%;left:-12%;animation-delay:-7s;transform:rotate(4deg)}
+@keyframes drift{0%{translate:-10vw 0;opacity:.1}45%{opacity:.8}100%{translate:120vw 0;opacity:.05}}
+nav{position:fixed;top:0;left:0;right:0;z-index:40;display:flex;align-items:center;justify-content:space-between;padding:16px clamp(20px,4vw,58px);background:linear-gradient(180deg,rgba(5,4,6,.88),rgba(5,4,6,.24));backdrop-filter:blur(22px);border-bottom:1px solid rgba(255,255,255,.06)}
+.brand{font-weight:800;letter-spacing:-.04em;font-size:21px}.brand b{color:var(--fire)}.navlinks{display:flex;gap:24px;font-size:13px;color:rgba(242,237,226,.74)}.navlinks a:hover{color:white}
+.pill{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:0 19px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.045);backdrop-filter:blur(14px);font-weight:650;font-size:13px;transition:.25s}.pill:hover{transform:translateY(-2px);border-color:rgba(255,92,26,.6)}.pill.fire{border:0;background:linear-gradient(135deg,var(--fire),#d83a00);color:#fff;box-shadow:0 12px 40px rgba(255,92,26,.16)}
+main{width:min(1180px,calc(100% - 34px));margin:auto}.section{min-height:80vh;display:grid;align-items:center;padding:130px 0 90px}.hero{min-height:100vh;grid-template-columns:1.05fr .95fr;gap:48px}
+.k{font:650 10px ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.24em;text-transform:uppercase;color:var(--fire)}h1,h2,h3,p{margin-top:0}h1{font-size:clamp(56px,8vw,108px);line-height:.89;letter-spacing:-.07em;margin:22px 0 28px;max-width:780px}h1 em,h2 em{font-style:normal;color:var(--fire)}.lead{max-width:660px;font-size:clamp(17px,2vw,22px);color:rgba(242,237,226,.72);letter-spacing:-.015em}.cta{display:flex;gap:12px;flex-wrap:wrap;margin:34px 0}.meta{display:flex;gap:20px;flex-wrap:wrap;margin-top:45px;color:rgba(242,237,226,.48);font:500 10px ui-monospace,monospace;letter-spacing:.1em;text-transform:uppercase}
+.orbit{position:relative;aspect-ratio:1;max-width:500px;margin:auto;border-radius:50%;display:grid;place-items:center}.orbit::before,.orbit::after{content:"";position:absolute;border:1px solid rgba(65,185,219,.35);border-radius:50%;inset:5%;animation:spin 18s linear infinite}.orbit::after{inset:18%;border-color:rgba(255,92,26,.55);animation-direction:reverse;animation-duration:12s}
+@keyframes spin{to{transform:rotate(360deg)}}.rotor{width:64%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle at center,#0b1015 0 15%,#b8bec5 16% 21%,#222830 22% 29%,#9aa1a7 30% 36%,#252a30 37% 47%,#c5c8ca 48% 53%,#262a30 54% 62%,transparent 63%);box-shadow:0 0 70px rgba(65,185,219,.17),0 0 90px rgba(255,92,26,.10);animation:spin 22s linear infinite;position:relative}.rotor::before{content:"";position:absolute;inset:7%;border-radius:50%;background:repeating-conic-gradient(from 0deg,transparent 0 7deg,rgba(0,0,0,.75) 8deg 10deg);mask:radial-gradient(circle,transparent 0 52%,black 54%)}.caliper{position:absolute;width:27%;height:43%;right:8%;top:25%;border-radius:30% 18% 30% 18%;background:linear-gradient(160deg,#ff7c42,#d52700 65%,#761300);box-shadow:0 0 38px rgba(255,92,26,.35);transform:rotate(8deg)}.dot{position:absolute;width:7px;height:7px;border-radius:50%;background:var(--cyan);box-shadow:0 0 18px var(--cyan)}.dot.d1{left:8%;top:43%;animation:pulse 1.8s ease-in-out infinite}.dot.d2{right:12%;top:18%;animation:pulse 2.4s ease-in-out infinite}.dot.d3{right:9%;bottom:22%;animation:pulse 2s ease-in-out infinite}@keyframes pulse{50%{transform:scale(2.2);opacity:.25}}
+.panel{border:1px solid var(--line);background:linear-gradient(145deg,rgba(255,255,255,.07),rgba(255,255,255,.025));backdrop-filter:blur(22px);border-radius:var(--r);box-shadow:inset 0 1px rgba(255,255,255,.08)}
+.statement{padding:clamp(28px,5vw,62px);display:grid;grid-template-columns:.95fr 1.05fr;gap:46px;align-items:end}h2{font-size:clamp(42px,6.5vw,78px);line-height:.95;letter-spacing:-.06em;margin-bottom:20px}.copy{font-size:17px;color:rgba(242,237,226,.64);max-width:580px}
+.bento{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:22px}.tile{padding:24px;min-height:150px}.num{font:700 11px ui-monospace,monospace;color:var(--cyan);letter-spacing:.14em}.tile h3{font-size:17px;margin:33px 0 8px}.tile p{font-size:13px;color:rgba(242,237,226,.53)}
+.product{grid-template-columns:.9fr 1.1fr;gap:55px}.phone-stage{position:relative;min-height:650px;display:grid;place-items:center;perspective:1100px}.phone{width:min(330px,76vw);height:620px;border-radius:49px;padding:11px;background:linear-gradient(150deg,#4b525a,#0b0d10 40%,#6b7278);box-shadow:0 45px 100px rgba(0,0,0,.55),0 0 80px rgba(65,185,219,.10);transform-style:preserve-3d;transition:transform .14s ease-out}.screen{height:100%;border-radius:39px;overflow:hidden;background:linear-gradient(180deg,#082143,#06111d 42%,#f5f6f8 42%);color:#0d213e;padding:26px 20px}.appbar{display:flex;align-items:center;justify-content:space-between;color:white;font-weight:800}.appbar b span{color:var(--fire)}.app-title{color:white;font-size:28px;line-height:1.02;letter-spacing:-.05em;margin:48px 0 20px}.app-title em{font-style:normal;color:var(--fire)}.search{height:46px;border-radius:13px;background:white;display:flex;align-items:center;padding:0 13px;font-size:12px;color:#71809a;box-shadow:0 10px 30px rgba(0,0,0,.14)}.search strong{margin-left:auto;background:var(--fire);color:white;border-radius:9px;padding:8px 11px}.shops{margin-top:37px}.shops h4{margin:0 0 14px}.shop{display:grid;grid-template-columns:48px 1fr auto;gap:9px;align-items:center;background:white;border-radius:14px;padding:10px;margin-bottom:9px;box-shadow:0 7px 20px rgba(7,24,45,.06)}.thumb{width:48px;height:38px;border-radius:8px;background:linear-gradient(135deg,#d7e2ef,#7ca0c8)}.shop b{font-size:11px}.shop small{display:block;color:#7b8da6}.wa{color:#14aa55;font-weight:900;font-size:19px}
+.float-card{position:absolute;padding:14px 16px;border-radius:16px;background:rgba(9,18,29,.78);border:1px solid rgba(65,185,219,.25);backdrop-filter:blur(16px);font:600 11px ui-monospace,monospace;color:rgba(242,237,226,.75);box-shadow:0 20px 40px rgba(0,0,0,.24);animation:float 5s ease-in-out infinite}.float-card.a{left:0;top:24%}.float-card.b{right:0;top:34%;animation-delay:-2s}.float-card.c{right:4%;bottom:15%;animation-delay:-3.2s}@keyframes float{50%{translate:0 -12px}}
+.core{padding:clamp(34px,5vw,62px)}.core-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:30px}.layer{display:flex;justify-content:space-between;gap:20px;padding:18px 20px;border-bottom:1px solid rgba(255,255,255,.08)}.layer strong{font-size:14px}.layer span{font:500 10px ui-monospace,monospace;color:var(--cyan);text-transform:uppercase}
+.closing{min-height:72vh;text-align:center;place-items:center}.closing .inner{max-width:880px;margin:auto}.closing h2{font-size:clamp(52px,8vw,100px)}.iadtx{display:flex;align-items:center;gap:16px;margin:54px auto 0;width:max-content;padding:12px 16px;border-radius:18px;background:rgba(0,0,0,.35);border:1px solid var(--line)}.iadtx img{width:58px;height:58px;border-radius:50%}.iadtx div{text-align:left}.iadtx b{display:block;letter-spacing:.12em}.iadtx small{color:rgba(242,237,226,.55)}
+footer{display:flex;justify-content:space-between;gap:20px;padding:30px 0 44px;border-top:1px solid rgba(255,255,255,.08);color:rgba(242,237,226,.44);font-size:11px}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .9s cubic-bezier(.2,.75,.2,1),transform .9s cubic-bezier(.2,.75,.2,1)}.reveal.on{opacity:1;transform:none}
+@media(max-width:900px){.navlinks{display:none}.hero,.statement,.product{grid-template-columns:1fr}.hero{padding-top:150px}.hero-art{order:-1}.orbit{max-width:360px}.bento{grid-template-columns:1fr 1fr}.core-grid{grid-template-columns:1fr}.phone-stage{min-height:660px}}
+@media(max-width:560px){main{width:min(100% - 22px,1180px)}nav{padding:13px 14px}.brand{font-size:18px}.pill.navcta{display:none}.section{padding:100px 0 60px;min-height:auto}.hero{min-height:100vh}.bento{grid-template-columns:1fr}.statement{padding:28px}.float-card{display:none}.phone{height:590px}.core{padding:26px}.layer{flex-direction:column;gap:4px}.iadtx{width:100%;justify-content:center}footer{flex-direction:column}}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}.lines i,.orbit::before,.orbit::after,.rotor,.float-card{animation:none!important}.reveal{opacity:1!important;transform:none!important}}
+</style>
+</head>
+<body>
+<div class="bg" id="bg"></div>
+<div class="lines"><i></i><i></i><i></i></div>
+<nav>
+<a class="brand" href="#top">Play<b>Peças</b></a>
+<div class="navlinks"><a href="#experiencia">Experiência</a><a href="#app">App</a><a href="#core">Arquitetura</a><a href="#final">Em breve</a></div>
+<a class="pill navcta" href="https://playpecas.app/" target="_blank" rel="noopener">Produto atual ↗</a>
+</nav>
+<main id="top">
+<section class="section hero">
+<div class="reveal">
+<span class="k">O futuro da busca por autopeças está chegando</span>
+<h1>A peça certa.<br><em>Mais perto.</em><br>Mais rápido.</h1>
+<p class="lead">Uma nova experiência para encontrar autopeças, conectar empresas e acelerar decisões — com precisão, proximidade e tecnologia.</p>
+<div class="cta"><a class="pill fire" href="#app">Ver experiência →</a><a class="pill" href="https://playpecas.app/" target="_blank" rel="noopener">Conhecer produto atual ↗</a></div>
+<div class="meta"><span>Design MD · PlayPeças</span><span>Preview vivo · v0.4.1</span><span>Auditoria · I.A.D.T.X</span></div>
+</div>
+<div class="hero-art reveal">
+<div class="orbit"><div class="rotor"></div><div class="caliper"></div><i class="dot d1"></i><i class="dot d2"></i><i class="dot d3"></i></div>
+</div>
+</section>
+
+<section id="experiencia" class="section">
+<div class="panel statement reveal">
+<div><span class="k">Mais que uma busca</span><h2>Uma plataforma feita para o <em>mundo automotivo.</em></h2></div>
+<div><p class="copy">O PlayPeças conecta quem precisa da peça a quem pode resolver. A nova direção organiza busca, proximidade, confiança e ação em uma experiência única — sem desperdiçar o que já foi construído.</p>
+<div class="bento">
+<div class="panel tile"><span class="num">01</span><h3>Busca inteligente</h3><p>Peça, marca, ano ou placa.</p></div>
+<div class="panel tile"><span class="num">02</span><h3>Geolocalização</h3><p>Empresas próximas, contexto local.</p></div>
+<div class="panel tile"><span class="num">03</span><h3>Verificação</h3><p>Mais confiança no próximo passo.</p></div>
+<div class="panel tile"><span class="num">04</span><h3>Contato direto</h3><p>WhatsApp como ponte para a ação.</p></div>
+</div></div>
+</div>
+</section>
+
+<section id="app" class="section product">
+<div class="reveal"><span class="k">Tecnologia na mão</span><h2>Do balcão<br>para o <em>bolso.</em></h2><p class="lead">A interface móvel concentra o que importa: identificar a necessidade, localizar empresas e transformar busca em contato. O objetivo é reduzir fricção — não criar complexidade.</p>
+<div class="cta"><a class="pill fire" href="#core">Ver arquitetura →</a></div></div>
+<div class="phone-stage reveal" id="phoneStage">
+<div class="float-card a">AUTOPEÇAS<br>NA SUA REGIÃO</div><div class="float-card b">EMPRESAS<br>VERIFICADAS</div><div class="float-card c">DA BUSCA À<br>SOLUÇÃO</div>
+<div class="phone" id="phone"><div class="screen">
+<div class="appbar"><b>Play<span>Peças</span></b><span>☰</span></div>
+<div class="app-title">Encontre autopeças<br><em>perto de você</em></div>
+<div class="search">Busque por peça, marca, ano ou placa <strong>⌕</strong></div>
+<div class="shops"><h4>Lojas próximas de você</h4>
+<div class="shop"><i class="thumb"></i><span><b>AutoPeças Silva ✓</b><small>4,8 · 1,2 km</small></span><i class="wa">●</i></div>
+<div class="shop"><i class="thumb"></i><span><b>Mecânica & Peças Rocha ✓</b><small>4,6 · 2,4 km</small></span><i class="wa">●</i></div>
+<div class="shop"><i class="thumb"></i><span><b>Central das Peças ✓</b><small>4,7 · 3,1 km</small></span><i class="wa">●</i></div>
+</div></div></div>
+</div>
+</section>
+
+<section id="core" class="section">
+<div class="panel core reveal">
+<span class="k">I.A.D.T.X · Arquitetura antes da ferramenta</span>
+<h2>O app é a interface.<br><em>O CORE é o ativo.</em></h2>
+<p class="copy">A evolução proposta não termina na tela. Ela conecta identidade, processos, contexto, memória, governança, skills, ferramentas e observabilidade em uma arquitetura que pode evoluir sem perder coerência.</p>
+<div class="core-grid">
+<div class="panel"><div class="layer"><strong>Identidade + processos</strong><span>núcleo</span></div><div class="layer"><strong>Contexto + memória</strong><span>continuidade</span></div><div class="layer"><strong>Conhecimento</strong><span>fonte</span></div></div>
+<div class="panel"><div class="layer"><strong>Governança</strong><span>controle</span></div><div class="layer"><strong>Skills + tools</strong><span>execução</span></div><div class="layer"><strong>Interfaces + app</strong><span>experiência</span></div></div>
+</div>
+</div>
+</section>
+
+<section id="final" class="section closing">
+<div class="inner reveal"><span class="k">Preview demonstrativo · Auditoria em evolução</span><h2>O Play<em>Peças</em><br>está chegando.</h2><p class="lead" style="margin-inline:auto">Mais autopeças. Mais movimento. Mais conexão. Uma experiência desenhada para transformar fricção em fluxo e tecnologia em resultado.</p>
+<div class="cta" style="justify-content:center"><a class="pill fire" href="https://playpecas.app/" target="_blank" rel="noopener">Ver PlayPeças atual ↗</a><a class="pill" href="#top">Voltar ao início ↑</a></div>
+<div class="iadtx"><img src="data:image/webp;base64,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" alt="I.A.D.T.X"><div><b>I.A.D.T.X</b><small>Arquitetura e curadoria · A IA responde. O CORE decide.</small></div></div>
+</div>
+</section>
+
+<footer><span>PlayPeças · preview vivo v0.4.1</span><span>Protótipo demonstrativo de direção visual · funções e integrações finais dependem da validação técnica da auditoria.</span></footer>
+</main>
+<script>
+const root=document.documentElement,bgEl=document.getElementById('bg'),phone=document.getElementById('phone'),stage=document.getElementById('phoneStage');
+let mx=.5,my=.5,sy=0,raf=0;
+function render(){raf=0;bgEl.style.transform='scale(1.08) translate3d('+((mx-.5)*-18)+'px,'+((my-.5)*-12+sy*-.018)+'px,0)';}
+addEventListener('pointermove',e=>{mx=e.clientX/innerWidth;my=e.clientY/innerHeight;if(!raf)raf=requestAnimationFrame(render)});
+addEventListener('scroll',()=>{sy=scrollY;if(!raf)raf=requestAnimationFrame(render)},{passive:true});
+if(stage)stage.addEventListener('pointermove',e=>{const r=stage.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;phone.style.transform='rotateY('+(x*9)+'deg) rotateX('+(-y*7)+'deg) translateZ(6px)'});
+if(stage)stage.addEventListener('pointerleave',()=>phone.style.transform='');
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('on')}),{threshold:.13});document.querySelectorAll('.reveal').forEach(el=>io.observe(el));render();
+</script>
+</body></html>
