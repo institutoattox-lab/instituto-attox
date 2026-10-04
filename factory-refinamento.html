@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>I.A.D.T.X Factory · Refinamento</title>
+<style>
+:root{--bg:#050406;--panel:#0c0a10;--surface:#141019;--line:#2a2430;--ink:#f2ede2;--muted:#a49baa;--fire:#ff5c1a;--cyan:#41b9db}*{box-sizing:border-box}body{margin:0;color:var(--ink);background:radial-gradient(ellipse at 90% 0,#27120e 0,transparent 45%),var(--bg);font:15px/1.55 Arial,system-ui,sans-serif}button,input,textarea,select{font:inherit}button{cursor:pointer}button:disabled{cursor:default;opacity:.38}button:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible{outline:2px solid var(--cyan);outline-offset:3px}main{max-width:1240px;padding:32px 24px 60px;margin:auto}header{display:flex;justify-content:space-between;gap:24px;align-items:center;padding-bottom:28px;border-bottom:1px solid var(--line)}.brand{font:bold 21px monospace;letter-spacing:.13em;color:var(--fire)}.tag,.eyebrow{font:12px monospace;letter-spacing:.09em;color:var(--muted)}.tag{padding:8px 12px;border:1px solid var(--line);border-radius:30px}.intro{display:flex;align-items:center;justify-content:space-between;padding:40px 0 30px;gap:20px}h1{font-size:clamp(32px,5vw,54px);line-height:1.05;letter-spacing:-.04em;margin:12px 0 16px;max-width:720px}h1 span{color:var(--fire)}h2{font-size:23px;margin:0 0 16px}h3{font-size:17px}p{color:var(--muted);margin:8px 0 20px}.geo{width:130px;height:130px;flex-shrink:0;color:var(--fire);opacity:.8}.steps{display:flex;gap:8px;margin:0 0 24px}.step{flex:1;text-align:left;padding:16px;border:1px solid var(--line);border-radius:12px;color:var(--muted);background:var(--panel)}.step.active{color:var(--ink);border-color:var(--fire);background:#26130d}.step b{font:13px monospace;color:var(--fire);margin-right:10px}.panel{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:28px}.grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}.field{display:flex;flex-direction:column;gap:7px;font-size:13px;color:var(--muted)}input,textarea,select{border:1px solid var(--line);background:#08070b;color:var(--ink);border-radius:9px;padding:12px;width:100%}textarea{min-height:100px;resize:vertical}textarea.code{font:13px/1.7 monospace;min-height:420px;tab-size:2}.wide{grid-column:1/-1}.actions{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:22px}.button{border:1px solid var(--line);background:var(--surface);color:var(--ink);padding:12px 18px;border-radius:9px;font-weight:600}.button.primary{background:var(--fire);color:#100903;border-color:var(--fire)}.button.cyan{color:var(--cyan);border-color:#215061}.hint{font-size:12px;margin-top:10px}.editor-grid{display:grid;grid-template-columns:230px 1fr;gap:22px}.file-list{display:flex;flex-direction:column;gap:5px}.file{border:1px solid transparent;color:var(--muted);background:transparent;text-align:left;font:12px monospace;padding:11px 9px;border-radius:6px}.file.active{color:var(--ink);border-color:var(--line);background:var(--surface)}.meta{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px;margin-bottom:12px}.pill{border:1px solid #215061;padding:7px 12px;border-radius:30px;color:var(--cyan);font:12px monospace}.check{display:flex;gap:10px;align-items:flex-start;margin-top:18px;padding:18px;border:1px solid var(--line);border-radius:9px}.check input{width:20px;margin-top:4px}.history{margin-top:22px;max-height:260px;overflow:auto}.history div{padding:10px 0;border-top:1px solid var(--line);font:12px monospace;color:var(--muted)}#message{min-height:24px;margin:18px 0;color:var(--cyan)}#message.error{color:#ff9a9a}.statusbar{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;padding:18px 0;font:12px monospace;color:var(--muted)}footer{border-top:1px solid var(--line);padding-top:24px;margin-top:36px;color:var(--muted);font-size:12px}footer strong{color:var(--ink)}[hidden]{display:none!important}@media(max-width:780px){main{padding:20px 16px}.intro{padding:28px 0}.geo{display:none}.steps{flex-direction:column}.grid,.editor-grid{grid-template-columns:1fr}.file-list{display:grid;grid-template-columns:1fr 1fr}.panel{padding:20px}header{align-items:flex-start;flex-direction:column;gap:10px}.tag{font-size:10px}.actions .button{flex:1}textarea.code{min-height:360px}}
+</style></head><body><main>
+<header><div class="brand">I.A.D.T.X <span style="color:var(--ink);font-size:14px">/ FACTORY</span></div><span class="tag">v0.5.1 · COMPILAR / REFINAR / EXPORTAR</span></header>
+<section class="intro"><div><div class="eyebrow">CLIENT COMPILER · CONTROLE DO SEU CORE</div><h1>Sua arquitetura.<br><span>Seu refinamento.</span></h1><p>Transforme o briefing em arquivos, revise cada texto e mantenha o histórico das alterações.</p></div><svg class="geo" viewBox="0 0 140 140" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width=".8"><circle cx="70" cy="70" r="60"/><path d="M70 10 13 51 35 118 105 118 127 51Z M70 10 35 118 127 51 13 51 105 118Z M13 51 70 82 127 51 M70 10 70 82 35 118 M70 82 105 118"/><circle cx="70" cy="82" r="3"/></g></svg></section>
+<nav class="steps" aria-label="Etapas da Factory"><button class="step active" data-tab="brief"><b>01</b> Briefing</button><button class="step" data-tab="edit"><b>02</b> Refinar arquivos</button><button class="step" data-tab="export"><b>03</b> Aprovar e exportar</button></nav>
+<section id="brief" class="panel"><div class="meta"><h2>Configure o CORE</h2><button class="button" id="import">Importar briefing ou projeto</button></div><p>Os dados ficam na memória deste navegador. Baixe o projeto JSON para retomar sua edição depois.</p>
+<div class="grid" id="fields">
+<label class="field">Nome do cliente<input id="name" value="I.A.D.T.X" maxlength="160"></label><label class="field">Público<input id="audience" placeholder="Para quem este CORE vai operar?"></label>
+<label class="field wide">Propósito<textarea id="purpose" placeholder="O que a operação precisa realizar?"></textarea></label>
+<label class="field">Voz · um atributo por linha<textarea id="voice">clara
+humana
+objetiva</textarea></label><label class="field">Princípios · um por linha<textarea id="principles">clareza antes de automação
+veracidade com evidências
+preservar a autoria e o histórico</textarea></label>
+<label class="field">Cores · uma por linha<textarea id="colors">#050406
+#FF5C1A
+#41B9DB
+#F2EDE2</textarea></label><label class="field">Processos · um por linha<textarea id="processes" placeholder="Ex.: curadoria editorial"></textarea></label>
+<label class="field">Regras · uma por linha<textarea id="rules">validar o conteúdo antes de publicar
+registrar versões e comprovantes
+não armazenar credenciais</textarea></label><label class="field">Fontes · uma por linha<textarea id="knowledge" placeholder="Declare os materiais autorizados"></textarea></label>
+</div><div class="actions"><button class="button primary" id="compile">Gerar os 12 arquivos</button><button class="button" id="new">Novo projeto</button></div><p class="hint">Um briefing gera uma proposta documental. A revisão humana define o conteúdo final.</p></section>
+<section id="edit" class="panel" hidden><div class="meta"><h2>Refine sem apagar a versão anterior</h2><span class="pill" id="revision">REV. 0</span></div><div class="editor-grid"><aside class="file-list" id="filelist" aria-label="Arquivos do CORE"></aside><div><label class="field">Artefato ativo<span id="artifactLabel" style="color:var(--ink);font-family:monospace">BRAND.md</span><textarea class="code" id="editor" spellcheck="false"></textarea></label><div class="actions"><button class="button primary" id="save">Registrar alteração</button><button class="button" id="markdown">Baixar este Markdown</button></div><p class="hint">Cada alteração registrada preserva o texto anterior e exige nova aprovação.</p></div></div><div class="history"><h3>Histórico de refinamento</h3><div id="historylist">Nenhuma alteração registrada.</div></div></section>
+<section id="export" class="panel" hidden><h2>Revise, aprove e leve seu CORE</h2><p>O projeto JSON pode ser salvo a qualquer momento. O pacote ZIP exige aprovação da versão atual.</p><label class="field">Responsável pela revisão<input id="author" value="Manoel Netto" maxlength="160"></label><label class="check"><input type="checkbox" id="consent"><span>Revisei os 12 artefatos e aprovo o conteúdo desta versão.</span></label><div class="actions"><button class="button primary" id="approve">Aprovar esta versão</button><button class="button" id="project">Salvar projeto editável</button><button class="button cyan" id="zip">Baixar pacote ZIP</button></div><p class="hint">O ZIP inclui Markdown, projeto editável, estado, histórico, manifesto e checksums SHA-256.</p></section>
+<div class="statusbar"><span id="state">SEM PROJETO COMPILADO</span><span>12 artefatos · Markdown / JSON / ZIP</span></div><div id="message" role="status" aria-live="polite"></div>
+<footer><strong>Execução local no navegador.</strong> Este console não chama uma IA nem grava automaticamente no Drive ou GitHub. Essas ações são executadas pelo assistente com os conectores autorizados. Nenhuma chave ou senha é necessária aqui.</footer>
+<input type="file" id="file" accept=".json,application/json" hidden>
+</main><script>
+'use strict';
+(function(root){
+const VERSION='0.5.1';
+const names=['BRAND.md','DESIGN.md','POSITIONING.md','MEMORY.md','PROMPT.md','PROMPT_SYSTEM.md','GOVERNANCE.md','SYSTEM_PROMPT.md','ARCHITECTURE.md','SKILLS.md','HARNESS.md','INTEGRATIONS.md'];
+const secretKeys=new Set(['api_key','apikey','authorization','password','secret','token','access_token','refresh_token','client_secret','cookie']);
+const clone=x=>JSON.parse(JSON.stringify(x));
+const cleanText=x=>x.replace(/bearer\s+[a-z0-9._~+/=-]+/gi,'Bearer [REDACTED]').replace(/\b(?:sk|ghp|github_pat)_[A-Za-z0-9_\-]{12,}\b/g,'[REDACTED]');
+function sanitize(x){if(Array.isArray(x))return x.map(sanitize);if(x&&typeof x==='object')return Object.fromEntries(Object.entries(x).map(([k,v])=>[k,secretKeys.has(k.toLowerCase())?'[REDACTED]':sanitize(v)]));return typeof x==='string'?cleanText(x):x;}
+function input(data){
+ if(!data||typeof data!=='object'||Array.isArray(data)||!data.client||typeof data.client!=='object'||Array.isArray(data.client)||typeof data.client.name!=='string'||!data.client.name.trim())throw Error('Informe o nome do cliente.');
+ for(const key of ['purpose','audience'])if(key in data.client&&typeof data.client[key]!=='string')throw Error(`client.${key} precisa ser texto.`);
+ for(const [o,keys] of [[data.client,['voice','principles','colors']],[data,['processes','rules','knowledge']]])for(const k of keys)if(k in o&&(!Array.isArray(o[k])||o[k].some(x=>typeof x!=='string')))throw Error(`${k} precisa ser uma lista de textos.`);
+ const d=sanitize(clone(data));d.client.name=d.client.name.trim();return d;
+}
+function render(data){
+ const d=input(data),c=d.client,name=c.name,purpose=c.purpose??'Não informado',audience=c.audience??'Não informado',voice=(c.voice??['clara','responsável']).join(', ');
+ const lines=(items,fallback)=>(items??[]).map(x=>'- '+x).join('\n')||'- '+fallback;
+ const principles=lines(c.principles,'A validar com o cliente'),processes=lines(d.processes,'A mapear'),rules=lines(d.rules,'Aprovação humana antes de ações externas'),knowledge=lines(d.knowledge,'Nenhuma fonte declarada'),colors=(c.colors??[]).join(', ')||'A definir';
+ const h=`# ${name}\n\nGerado pela I.A.D.T.X Factory v${VERSION}.\n`;
+ return {
+ 'BRAND.md':h+`\n## Propósito\n${purpose}\n\n## Público\n${audience}\n\n## Voz\n${voice}\n\n## Princípios\n${principles}\n`,
+ 'DESIGN.md':h+`\n## Direção visual\nCores declaradas: ${colors}.\n\nA identidade final exige validação humana e arquivos licenciados do cliente.\n`,
+ 'POSITIONING.md':h+`\n## Posição\n${purpose}\n\n## Promessa\nTransformar conhecimento disperso em operação consistente sem cativeiro de plataforma.\n`,
+ 'MEMORY.md':h+`\n## Fontes autorizadas\n${knowledge}\n\n## Regra\nNão persistir segredos, credenciais ou dados pessoais sem base e autorização.\n`,
+ 'PROMPT.md':h+'\n## Instrução ativa\nToda tarefa deve declarar objetivo, fontes, limites, formato de saída e critério de aceite. A ordem recebida passa por GOVERNANCE.md antes de qualquer ação externa.\n',
+ 'PROMPT_SYSTEM.md':h+'\n## Sistema de prompts\nToda tarefa deve declarar objetivo, fontes, limites, formato de saída e critério de aceite.\n',
+ 'GOVERNANCE.md':h+`\n## Regras\n${rules}\n\n## Gate\nAções externas, publicação, escrita em Drive/GitHub e uso de credenciais exigem autoridade válida.\n`,
+ 'SYSTEM_PROMPT.md':h+`\nVocê opera em nome de ${name}. Preserve propósito, voz, regras, privacidade e aprovação humana. Modelos são motores substituíveis; o CORE é a fonte de verdade.\n`,
+ 'ARCHITECTURE.md':h+`\n## Fluxo\nMateriais brutos -> ingestão -> diagnóstico -> artefatos -> validação -> aprovação humana -> versionamento -> CORE -> pacote soberano.\n\n## Processos iniciais\n${processes}\n`,
+ 'SKILLS.md':h+'\n## Skills candidatas\n- diagnosticar_material\n- redigir_com_contexto\n- validar_governanca\n- empacotar_core\n\nNenhuma skill obtém autoridade externa por padrão.\n',
+ 'HARNESS.md':h+'\n## Harness\n1. Validar entrada.\n2. Sanitizar segredos.\n3. Compilar contexto.\n4. Executar motor selecionado.\n5. Avaliar saída.\n6. Exigir aprovação.\n7. Registrar versão e checksums.\n',
+ 'INTEGRATIONS.md':h+'\n## Estado dos adapters\n- filesystem: operacional localmente\n- GitHub: conector externo; autoridade e autenticação obrigatórias\n- Google Drive: conector externo; autoridade e autenticação obrigatórias\n- MCP: contrato preparado; servidor não incluído neste pacote\n- LLMs: interface preparada; nenhum provider é obrigatório\n\nIntegrações não conectadas não são simuladas como operacionais.\n'
+ };
+}
+const slug=name=>name.normalize('NFKD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
+const now=()=>new Date().toISOString();
+function compile(data){const d=input(data);if(!slug(d.client.name))throw Error('O nome precisa conter letras ou números.');return {schema:'iadtx.factory.project.v1',factory_version:VERSION,input:d,core:render(d),state:{client:d.client.name,slug:slug(d.client.name),stage:'awaiting_human_approval',revision:0,created_at:now(),approver:null,approved_at:null},history:[]};}
+function validate(p){
+ if(!p||p.schema!=='iadtx.factory.project.v1'||p.factory_version!==VERSION||!p.state||!Array.isArray(p.history))throw Error('Projeto incompatível com esta Factory.');
+ input(p.input);
+ if(p.state.client!==p.input.client.name||p.state.slug!==slug(p.input.client.name)||!Number.isInteger(p.state.revision)||p.state.revision<0||!['awaiting_human_approval','approved'].includes(p.state.stage))throw Error('Estado do projeto inválido.');
+ if(!p.core||Object.keys(p.core).length!==names.length||names.some(n=>typeof p.core[n]!=='string'||!p.core[n].trim()))throw Error('O CORE precisa conter os 12 artefatos preenchidos.');
+ if(p.history.length!==p.state.revision||p.history.some((h,i)=>!h||h.revision!==i+1||!names.includes(h.artifact)||typeof h.previous!=='string'||typeof h.author!=='string'||typeof h.edited_at!=='string'))throw Error('Histórico do projeto inválido.');
+ return true;
+}
+function edit(p,artifact,text,author){validate(p);if(!names.includes(artifact)||typeof text!=='string'||!text.trim()||!author.trim())throw Error('Informe artefato, conteúdo e responsável.');const next=sanitize(text);if(next===p.core[artifact])return false;
+ p.history.push({revision:p.state.revision+1,artifact,previous:p.core[artifact],author:sanitize(author.trim()),edited_at:now()});p.core[artifact]=next;p.state.revision++;p.state.stage='awaiting_human_approval';p.state.approver=null;p.state.approved_at=null;delete p.state.approved_content_sha256;return true;}
+async function hash(value){const bytes=typeof value==='string'?new TextEncoder().encode(value):value;const digest=await crypto.subtle.digest('SHA-256',bytes);return [...new Uint8Array(digest)].map(x=>x.toString(16).padStart(2,'0')).join('');}
+async function contentHash(p){validate(p);return hash(JSON.stringify(names.map(n=>[n,p.core[n]])));}
+async function approve(p,author){validate(p);if(!author.trim())throw Error('Informe quem revisou o CORE.');p.state.approved_content_sha256=await contentHash(p);p.state.stage='approved';p.state.approver=sanitize(author.trim());p.state.approved_at=now();}
+async function approved(p){return p.state.stage==='approved'&&!!p.state.approver&&!!p.state.approved_at&&p.state.approved_content_sha256===await contentHash(p);}
+async function files(p){validate(p);if(!await approved(p))throw Error('Revise e aprove o conteúdo atual antes de gerar o ZIP.');const result={};for(const n of names)result['core/'+n]=p.core[n];
+ result['README.md']=`# Pacote soberano - ${p.state.client}\n\nI.A.D.T.X Factory v${VERSION}.\n\nComece por core/ARCHITECTURE.md, core/GOVERNANCE.md e core/SYSTEM_PROMPT.md.\nO projeto editável acompanha este pacote. Integrações externas não são ativadas por este ZIP.\n`;
+ result['STATE.json']=JSON.stringify(p.state,null,2)+'\n';result['evidence/INPUT.sanitized.json']=JSON.stringify(p.input,null,2)+'\n';result['PROJECT.json']=JSON.stringify(p,null,2)+'\n';
+ for(const h of p.history){if(!Number.isInteger(h.revision)||h.revision<1||!names.includes(h.artifact)||typeof h.previous!=='string')throw Error('Histórico inválido.');result[`history/${String(h.revision).padStart(4,'0')}/${h.artifact}`]=h.previous;}
+ const entries=[];for(const n of Object.keys(result).sort())entries.push({path:n,bytes:new TextEncoder().encode(result[n]).length,sha256:await hash(result[n])});result['MANIFEST.json']=JSON.stringify({schema:'iadtx.sovereign-package.manifest.v1',factory_version:VERSION,portable:true,entrypoint:'README.md',files:entries},null,2)+'\n';
+ let checks='';for(const n of Object.keys(result).sort())checks+=await hash(result[n])+'  '+n+'\n';result['CHECKSUMS.sha256']=checks;return result;
+}
+// Store-only ZIP with UTF-8 filenames; portable and dependency-free.
+const crcTable=Array.from({length:256},(_,i)=>{let c=i;for(let j=0;j<8;j++)c=c&1?0xedb88320^(c>>>1):c>>>1;return c>>>0;});
+function crc(bytes){let c=0xffffffff;for(const b of bytes)c=crcTable[(c^b)&255]^(c>>>8);return (c^0xffffffff)>>>0;}
+function zip(entries,prefix){const local=[],central=[];let offset=0;const enc=new TextEncoder();
+ for(const path of Object.keys(entries).sort()){const name=enc.encode(prefix+'/'+path),data=enc.encode(entries[path]),checksum=crc(data);const a=new Uint8Array(30+name.length+data.length),v=new DataView(a.buffer);v.setUint32(0,0x04034b50,true);v.setUint16(4,20,true);v.setUint16(6,0x800,true);v.setUint16(12,33,true);v.setUint32(14,checksum,true);v.setUint32(18,data.length,true);v.setUint32(22,data.length,true);v.setUint16(26,name.length,true);a.set(name,30);a.set(data,30+name.length);local.push(a);
+ const b=new Uint8Array(46+name.length),w=new DataView(b.buffer);w.setUint32(0,0x02014b50,true);w.setUint16(4,20,true);w.setUint16(6,20,true);w.setUint16(8,0x800,true);w.setUint16(14,33,true);w.setUint32(16,checksum,true);w.setUint32(20,data.length,true);w.setUint32(24,data.length,true);w.setUint16(28,name.length,true);w.setUint32(42,offset,true);b.set(name,46);central.push(b);offset+=a.length;}
+ const cs=central.reduce((n,a)=>n+a.length,0),end=new Uint8Array(22),ev=new DataView(end.buffer);ev.setUint32(0,0x06054b50,true);ev.setUint16(8,central.length,true);ev.setUint16(10,central.length,true);ev.setUint32(12,cs,true);ev.setUint32(16,offset,true);const all=new Uint8Array(offset+cs+22);let n=0;for(const a of [...local,...central,end]){all.set(a,n);n+=a.length;}return all;
+}
+const api={VERSION,names,sanitize,input,render,compile,validate,edit,hash,approve,approved,files,zip};if(typeof module==='object'&&module.exports)module.exports=api;else root.IADTXFactory=api;
+})(typeof globalThis!=='undefined'?globalThis:this);
+
+</script><script>
+const F=IADTXFactory,$=s=>document.querySelector(s);let project=null,artifact='BRAND.md',busy=false,unsaved=false;
+const list=id=>$('#'+id).value.split('\n').map(s=>s.trim()).filter(Boolean);
+const message=(text,error=false)=>{$('#message').textContent=text;$('#message').className=error?'error':'';};
+function sync(){
+ $('#compile').disabled=busy||!!project;$('#approve').disabled=busy||!project||!$('#consent').checked;$('#zip').disabled=busy||!project||project.state.stage!=='approved';$('#project').disabled=busy||!project;$('#save').disabled=busy||!project;$('#markdown').disabled=busy||!project;$('#import').disabled=busy;
+ for(const e of $('#fields').querySelectorAll('input,textarea'))e.disabled=!!project||busy;
+ $('#state').textContent=project?`${project.state.client} · REV. ${project.state.revision} · ${project.state.stage==='approved'?'APROVADO':'AGUARDANDO REVISÃO'}`:'SEM PROJETO COMPILADO';$('#revision').textContent='REV. '+(project?.state.revision??0);
+ $('#consent').disabled=busy||!project;$('#new').disabled=busy;
+}
+function history(){const el=$('#historylist');el.replaceChildren();if(!project?.history.length){el.textContent='Nenhuma alteração registrada.';return;}for(const h of [...project.history].reverse()){const row=document.createElement('div');row.textContent=`Rev. ${h.revision} · ${h.artifact} · ${h.author} · ${new Date(h.edited_at).toLocaleString('pt-BR')}`;el.append(row);}}
+function fillBrief(d){for(const k of ['name','purpose','audience'])$('#'+k).value=d.client[k]||'';for(const k of ['voice','principles','colors'])$('#'+k).value=(d.client[k]||[]).join('\n');for(const k of ['processes','rules','knowledge'])$('#'+k).value=(d[k]||[]).join('\n');}
+function showArtifact(){if(!project)return;$('#editor').value=project.core[artifact];$('#artifactLabel').textContent=artifact;for(const b of $('#filelist').children)b.classList.toggle('active',b.dataset.file===artifact);history();sync();}
+function commitEditor(){if(project&&$('#editor').value!==project.core[artifact]){F.edit(project,artifact,$('#editor').value,$('#author').value);$('#consent').checked=false;unsaved=true;history();sync();}}
+function tab(name){if(name!=='brief'&&!project)throw Error('Gere ou importe um projeto primeiro.');if(!$('#edit').hidden)commitEditor();for(const n of ['brief','edit','export'])$('#'+n).hidden=n!==name;for(const e of $('.steps').children)e.classList.toggle('active',e.dataset.tab===name);if(name==='edit')showArtifact();sync();}
+async function action(fn){if(busy)return;busy=true;sync();try{await fn();}catch(e){message(e.message,true);}finally{busy=false;sync();}}
+function download(data,name,type){const url=URL.createObjectURL(new Blob([data],{type})),a=document.createElement('a');a.href=url;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(url),1500);}
+function filename(){return project.state.slug+'-core-v'+F.VERSION+'-r'+project.state.revision;}
+$('#compile').onclick=()=>action(()=>{project=F.compile({client:{name:$('#name').value,purpose:$('#purpose').value,audience:$('#audience').value,voice:list('voice'),principles:list('principles'),colors:list('colors')},processes:list('processes'),rules:list('rules'),knowledge:list('knowledge')});artifact='BRAND.md';unsaved=true;showArtifact();tab('edit');message('CORE gerado. Revise os textos antes de aprovar.');});
+for(const n of F.names){const b=document.createElement('button');b.type='button';b.className='file';b.dataset.file=n;b.textContent=n;b.onclick=()=>action(()=>{commitEditor();artifact=n;showArtifact();});$('#filelist').append(b);}
+for(const b of $('.steps').children)b.onclick=()=>action(()=>tab(b.dataset.tab));
+$('#save').onclick=()=>action(()=>{commitEditor();showArtifact();message('Alteração registrada; a versão anterior está no histórico.');});
+$('#markdown').onclick=()=>action(()=>{commitEditor();download(project.core[artifact],artifact,'text/markdown;charset=utf-8');});
+$('#approve').onclick=()=>action(async()=>{commitEditor();if(!$('#consent').checked)throw Error('Confirme a revisão dos 12 artefatos.');await F.approve(project,$('#author').value);unsaved=true;message('Versão atual aprovada. O ZIP está liberado.');});
+$('#project').onclick=()=>action(()=>{commitEditor();download(JSON.stringify(project,null,2)+'\n',filename()+'.json','application/json');unsaved=false;message('Projeto exportado. Importe este JSON para continuar depois.');});
+$('#zip').onclick=()=>action(async()=>{commitEditor();const entries=await F.files(project);download(F.zip(entries,filename()),filename()+'.zip','application/zip');unsaved=false;message('Pacote ZIP gerado com conteúdo, histórico e checksums.');});
+$('#editor').oninput=()=>{unsaved=true;$('#consent').checked=false;if(project){project.state.stage='awaiting_human_approval';project.state.approver=null;project.state.approved_at=null;delete project.state.approved_content_sha256;}sync();};
+$('#consent').onchange=sync;$('#author').oninput=()=>{$('#consent').checked=false;sync();};
+$('#new').onclick=()=>action(()=>{if(project&&unsaved&&!confirm('Há alterações sem exportação. Deseja iniciar outro projeto?'))return;project=null;artifact='BRAND.md';unsaved=false;$('#consent').checked=false;tab('brief');message('Novo projeto. Ajuste o briefing e gere seus arquivos.');});
+$('#import').onclick=()=>$('#file').click();$('#file').onchange=()=>action(async()=>{const file=$('#file').files[0];if(!file)return;if(file.size>5*1024*1024)throw Error('Use um JSON com até 5 MB.');if(project&&unsaved&&!confirm('Há alterações sem exportação. Deseja importar outro projeto?'))return;const data=F.sanitize(JSON.parse(await file.text()));const incoming=data.schema==='iadtx.factory.project.v1'?data:F.compile(data);F.validate(incoming);incoming.state.stage='awaiting_human_approval';incoming.state.approver=null;incoming.state.approved_at=null;delete incoming.state.approved_content_sha256;project=incoming;artifact='BRAND.md';unsaved=false;$('#consent').checked=false;fillBrief(project.input);showArtifact();tab('edit');message('Projeto importado. Revise antes de aprovar novamente.');$('#file').value='';});
+window.addEventListener('beforeunload',e=>{if(unsaved){e.preventDefault();e.returnValue='';}});sync();
+</script></body></html>
