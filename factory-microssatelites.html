@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>I.A.D.T.X Factory · Microssatélites</title>
+<style>
+:root{--bg:#050406;--panel:#0c0a10;--surface:#141019;--line:#322a38;--ink:#f2ede2;--muted:#b3a9bc;--fire:#ff5c1a;--cyan:#41b9db}*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 100% 0,#25130d,transparent 42%),var(--bg);color:var(--ink);font:16px/1.55 system-ui,sans-serif}main{max-width:1180px;margin:auto;padding:24px 24px 60px}header{display:flex;justify-content:space-between;align-items:center;gap:20px;border-bottom:1px solid var(--line);padding-bottom:22px}.brand{font:700 20px monospace;letter-spacing:.12em;color:var(--fire)}.meta,.eyebrow{font:12px/1.6 monospace;color:var(--muted)}h1{font:400 clamp(35px,5vw,58px)/1.06 Georgia,serif;letter-spacing:-.035em;margin:16px 0;max-width:780px}h1 span{color:var(--fire)}h2{font-size:24px;line-height:1.25;margin:0 0 12px}h3{font-size:17px}p{margin:10px 0 18px;color:var(--muted)}.intro{padding:28px 0}.chain{color:var(--cyan);font-size:13px}.toolbar,.actions{display:flex;flex-wrap:wrap;gap:10px;align-items:center}.toolbar{padding-bottom:20px}.button,.tab{border:1px solid var(--line);border-radius:9px;background:var(--surface);color:var(--ink);min-height:46px;padding:11px 16px;font:600 14px/1.35 system-ui,sans-serif;cursor:pointer}.button.primary{background:var(--fire);color:#170a04;border-color:var(--fire)}.button.cyan{color:var(--cyan)}button:disabled{opacity:.45;cursor:default}button:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible,summary:focus-visible{outline:2px solid var(--cyan);outline-offset:3px}nav{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:20px}.tab{text-align:left;background:var(--panel);color:var(--muted)}.tab[aria-selected=true]{color:var(--ink);border-color:var(--fire);background:#25130e}.tab b{color:var(--fire);margin-right:8px}.panel{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:26px}.grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}.wide{grid-column:1/-1}.field{display:flex;flex-direction:column;gap:7px;font-size:14px;color:var(--ink)}.field small,.hint{font-size:12px;color:var(--muted)}input,textarea,select{font:16px/1.5 system-ui,sans-serif;color:var(--ink);background:#08070b;border:1px solid var(--line);padding:12px;border-radius:8px;width:100%;min-width:0}textarea{resize:vertical;min-height:100px}textarea.long{min-height:220px}textarea.preview{min-height:420px;font:13px/1.7 monospace}.author{max-width:300px;margin-left:auto}.status{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;margin:18px 0;font:12px/1.6 monospace;color:var(--muted)}.pill{border:1px solid #215061;border-radius:30px;color:var(--cyan);padding:5px 10px}.finding-layout{display:grid;grid-template-columns:180px 1fr;gap:22px}.finding-list{display:flex;flex-direction:column;gap:8px;margin-bottom:14px}.finding{border:1px solid var(--line);border-radius:8px;background:transparent;color:var(--muted);text-align:left;min-height:46px;padding:10px;cursor:pointer}.finding.active{border-color:var(--cyan);color:var(--ink);background:var(--surface)}details{border-top:1px solid var(--line);padding:18px 0;margin-top:18px}summary{cursor:pointer;font-weight:600;margin-bottom:18px;min-height:30px}.note{border-left:2px solid var(--cyan);padding:0 0 0 14px;color:var(--muted);font-size:13px}.gaps{background:var(--surface);border:1px solid var(--line);border-radius:9px;padding:16px;margin:18px 0}.gaps ul{padding-left:20px;margin:10px 0}.gaps li{font-size:13px;color:var(--muted);margin:4px 0}.exports{display:grid;grid-template-columns:1fr 1fr;gap:16px}.export-card{padding:18px;background:var(--surface);border:1px solid var(--line);border-radius:10px}.export-card p{font-size:13px}.export-card .button{width:100%}#message{min-height:26px;margin:20px 0;color:var(--cyan)}#message.error{color:#ffb1a7}footer{border-top:1px solid var(--line);margin-top:30px;padding-top:22px;color:var(--muted);font-size:12px}a{color:var(--cyan)}[hidden]{display:none!important}@media(max-width:760px){main{padding:20px 16px 40px}header{align-items:flex-start;flex-direction:column;gap:5px}.intro{padding:22px 0}nav{grid-template-columns:1fr 1fr}.panel{padding:20px}.grid,.finding-layout,.exports{grid-template-columns:1fr}.toolbar .button{flex:1}.author{max-width:none;width:100%;margin:8px 0 0}.finding-list{display:grid;grid-template-columns:repeat(3,1fr)}.actions .button{flex:1}.wide{grid-column:auto}textarea.preview{min-height:340px}}@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
+</style>
+</head>
+<body><main>
+<header><div class="brand">I.A.D.T.X <span style="color:var(--ink)">FACTORY</span></div><div class="meta">DIAGNÓSTICO 0.1.0 · REVISÃO 0.6.0-rc.1</div></header>
+<section class="intro"><div class="eyebrow">SUA MALETA DE DIAGNÓSTICO EMPRESARIAL</div><h1>Escute a empresa.<br><span>Estruture o que fica.</span></h1><p>Registre o fundamento, conecte o micro ao macro e prepare um CORE que o cliente possa revisar e levar consigo.</p><div class="chain">Filosofia → Branding → Processos → Arquitetura → IA/Automação</div></section>
+<div class="toolbar"><button class="button" id="new">Nova sessão</button><button class="button" id="import">Importar sessão</button><button class="button cyan" id="session">Salvar sessão JSON</button><label class="field author">Responsável pelo registro<input id="author" autocomplete="name" placeholder="Seu nome"></label></div>
+<nav aria-label="Etapas"><button class="tab" data-tab="foundation" aria-selected="true"><b>01</b>Fundamento</button><button class="tab" data-tab="diagnosis" aria-selected="false"><b>02</b>Diagnóstico</button><button class="tab" data-tab="campaign" aria-selected="false"><b>03</b>Campanha</button><button class="tab" data-tab="outputs" aria-selected="false"><b>04</b>Arquitetura</button></nav>
+<section class="panel" id="foundation"><h2>O que governa esta empresa?</h2><p>As ferramentas recebem limites a partir deste fundamento. Registre o que o cliente declarou e deixe explícito o que ainda precisa ser descoberto.</p><div class="grid" id="org-fields"></div><div class="actions"><button class="button primary" data-next="diagnosis">Registrar problemas</button></div></section>
+<section class="panel" id="diagnosis" hidden><h2>Do micro ao macro</h2><p>Uma fala abre uma investigação. Registre a origem e construa a ligação com o processo, a hipótese e a menor entrega verificável.</p><details><summary>Notas da reunião</summary><div class="grid" id="meeting-fields"></div><p class="hint">Cole a transcrição ou use o ditado do teclado do celular. Este módulo recebe texto; não grava nem transcreve áudio.</p></details><div class="finding-layout"><aside><div id="finding-list" class="finding-list"></div><button class="button" id="add">Adicionar achado</button></aside><div><div class="status"><span id="finding-id" class="pill"></span><button class="button" id="remove">Remover achado</button></div><div class="grid" id="finding-main"></div><details open><summary>Hipótese e intervenção</summary><div class="grid" id="finding-action"></div></details><details><summary>Prognóstico e medição</summary><div class="grid" id="finding-prognosis"></div></details></div></div><div class="actions"><button class="button primary" data-next="campaign">Definir campanha</button></div></section>
+<section class="panel" id="campaign" hidden><h2>Uma entrega que o cliente pode experimentar</h2><p>Defina uma campanha delimitada, com acompanhamento e critérios de encerramento. Prazo e preço são propostas até a confirmação comercial.</p><div class="actions" style="margin-bottom:22px"><button class="button cyan" id="campaign-example">Usar referência: 15 dias / R$ 1.000</button></div><div class="grid" id="campaign-fields"></div><p class="note">Acesso ao GPT/MCP requer uma conexão própria por cliente. A duração registrada aqui orienta o contrato; a expiração precisa ser aplicada no serviço conectado.</p><div class="actions"><button class="button primary" data-next="outputs">Preparar arquitetura</button></div></section>
+<section class="panel" id="outputs" hidden><h2>Arquitetura com origem e revisão</h2><p>O diagnóstico alimenta os 12 arquivos atuais da Factory. Você pode exportar a sessão incompleta e continuar depois; o CORE exige os campos mínimos abaixo.</p><div id="gaps" class="gaps"></div><div class="exports"><div class="export-card"><h3>Projeto da Factory</h3><p>JSON compatível com o console 0.5.1, com os 12 arquivos enriquecidos e histórico. Importe no console para refinar e aprovar.</p><button class="button primary" id="core">Criar projeto JSON</button></div><div class="export-card"><h3>Pacote de revisão</h3><p>ZIP com diagnóstico, prognóstico, evidências, campanha, projeto, sessão e os 12 Markdown. Identificado como rascunho.</p><button class="button" id="zip">Baixar rascunho ZIP</button></div></div><details open><summary>Revisar documentação</summary><label class="field">Documento<select id="document"></select></label><textarea class="preview" id="preview" readonly aria-label="Prévia do documento"></textarea><div class="actions"><button class="button" id="markdown">Baixar este Markdown</button></div></details><details><summary>Retomar neste aparelho</summary><p class="hint">Guardar aqui é opcional. A cópia fica neste navegador e pode ser apagada pelo aparelho. O JSON exportado permite levar a sessão para outro dispositivo.</p><div class="actions"><button class="button" id="store">Guardar cópia local</button><button class="button" id="restore">Retomar cópia local</button><button class="button" id="forget">Apagar cópia local</button></div><p class="hint" id="local-status"></p></details></section>
+<div class="status"><span id="state">SESSÃO NOVA</span><span>Entrada assistida · aprovação no console Factory</span></div><div id="message" role="status" aria-live="polite"></div>
+<footer><strong>O CORE antecede a automação.</strong> Este módulo organiza o conteúdo informado, preserva revisões e gera arquivos portáteis. Análise por IA, MCP, sincronização com Drive/GitHub e expiração de acesso não estão conectados nesta revisão. A classificação de um achado continua sob responsabilidade humana. Não coloque credenciais nas notas ou nos arquivos.</footer>
+<input id="file" type="file" accept=".json,application/json" hidden>
+</main>
+<script>'use strict';
+(function(root){
+const VERSION='0.5.1';
+const names=['BRAND.md','DESIGN.md','POSITIONING.md','MEMORY.md','PROMPT.md','PROMPT_SYSTEM.md','GOVERNANCE.md','SYSTEM_PROMPT.md','ARCHITECTURE.md','SKILLS.md','HARNESS.md','INTEGRATIONS.md'];
+const secretKeys=new Set(['api_key','apikey','authorization','password','secret','token','access_token','refresh_token','client_secret','cookie']);
+const clone=x=>JSON.parse(JSON.stringify(x));
+const cleanText=x=>x.replace(/bearer\s+[a-z0-9._~+/=-]+/gi,'Bearer [REDACTED]').replace(/\b(?:sk|ghp|github_pat)_[A-Za-z0-9_\-]{12,}\b/g,'[REDACTED]');
+function sanitize(x){if(Array.isArray(x))return x.map(sanitize);if(x&&typeof x==='object')return Object.fromEntries(Object.entries(x).map(([k,v])=>[k,secretKeys.has(k.toLowerCase())?'[REDACTED]':sanitize(v)]));return typeof x==='string'?cleanText(x):x;}
+function input(data){
+ if(!data||typeof data!=='object'||Array.isArray(data)||!data.client||typeof data.client!=='object'||Array.isArray(data.client)||typeof data.client.name!=='string'||!data.client.name.trim())throw Error('Informe o nome do cliente.');
+ for(const key of ['purpose','audience'])if(key in data.client&&typeof data.client[key]!=='string')throw Error(`client.${key} precisa ser texto.`);
+ for(const [o,keys] of [[data.client,['voice','principles','colors']],[data,['processes','rules','knowledge']]])for(const k of keys)if(k in o&&(!Array.isArray(o[k])||o[k].some(x=>typeof x!=='string')))throw Error(`${k} precisa ser uma lista de textos.`);
+ const d=sanitize(clone(data));d.client.name=d.client.name.trim();return d;
+}
+function render(data){
+ const d=input(data),c=d.client,name=c.name,purpose=c.purpose??'Não informado',audience=c.audience??'Não informado',voice=(c.voice??['clara','responsável']).join(', ');
+ const lines=(items,fallback)=>(items??[]).map(x=>'- '+x).join('\n')||'- '+fallback;
+ const principles=lines(c.principles,'A validar com o cliente'),processes=lines(d.processes,'A mapear'),rules=lines(d.rules,'Aprovação humana antes de ações externas'),knowledge=lines(d.knowledge,'Nenhuma fonte declarada'),colors=(c.colors??[]).join(', ')||'A definir';
+ const h=`# ${name}\n\nGerado pela I.A.D.T.X Factory v${VERSION}.\n`;
+ return {
+ 'BRAND.md':h+`\n## Propósito\n${purpose}\n\n## Público\n${audience}\n\n## Voz\n${voice}\n\n## Princípios\n${principles}\n`,
+ 'DESIGN.md':h+`\n## Direção visual\nCores declaradas: ${colors}.\n\nA identidade final exige validação humana e arquivos licenciados do cliente.\n`,
+ 'POSITIONING.md':h+`\n## Posição\n${purpose}\n\n## Promessa\nTransformar conhecimento disperso em operação consistente sem cativeiro de plataforma.\n`,
+ 'MEMORY.md':h+`\n## Fontes autorizadas\n${knowledge}\n\n## Regra\nNão persistir segredos, credenciais ou dados pessoais sem base e autorização.\n`,
+ 'PROMPT.md':h+'\n## Instrução ativa\nToda tarefa deve declarar objetivo, fontes, limites, formato de saída e critério de aceite. A ordem recebida passa por GOVERNANCE.md antes de qualquer ação externa.\n',
+ 'PROMPT_SYSTEM.md':h+'\n## Sistema de prompts\nToda tarefa deve declarar objetivo, fontes, limites, formato de saída e critério de aceite.\n',
+ 'GOVERNANCE.md':h+`\n## Regras\n${rules}\n\n## Gate\nAções externas, publicação, escrita em Drive/GitHub e uso de credenciais exigem autoridade válida.\n`,
+ 'SYSTEM_PROMPT.md':h+`\nVocê opera em nome de ${name}. Preserve propósito, voz, regras, privacidade e aprovação humana. Modelos são motores substituíveis; o CORE é a fonte de verdade.\n`,
+ 'ARCHITECTURE.md':h+`\n## Fluxo\nMateriais brutos -> ingestão -> diagnóstico -> artefatos -> validação -> aprovação humana -> versionamento -> CORE -> pacote soberano.\n\n## Processos iniciais\n${processes}\n`,
+ 'SKILLS.md':h+'\n## Skills candidatas\n- diagnosticar_material\n- redigir_com_contexto\n- validar_governanca\n- empacotar_core\n\nNenhuma skill obtém autoridade externa por padrão.\n',
+ 'HARNESS.md':h+'\n## Harness\n1. Validar entrada.\n2. Sanitizar segredos.\n3. Compilar contexto.\n4. Executar motor selecionado.\n5. Avaliar saída.\n6. Exigir aprovação.\n7. Registrar versão e checksums.\n',
+ 'INTEGRATIONS.md':h+'\n## Estado dos adapters\n- filesystem: operacional localmente\n- GitHub: conector externo; autoridade e autenticação obrigatórias\n- Google Drive: conector externo; autoridade e autenticação obrigatórias\n- MCP: contrato preparado; servidor não incluído neste pacote\n- LLMs: interface preparada; nenhum provider é obrigatório\n\nIntegrações não conectadas não são simuladas como operacionais.\n'
+ };
+}
+const slug=name=>name.normalize('NFKD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
+const now=()=>new Date().toISOString();
+function compile(data){const d=input(data);if(!slug(d.client.name))throw Error('O nome precisa conter letras ou números.');return {schema:'iadtx.factory.project.v1',factory_version:VERSION,input:d,core:render(d),state:{client:d.client.name,slug:slug(d.client.name),stage:'awaiting_human_approval',revision:0,created_at:now(),approver:null,approved_at:null},history:[]};}
+function validate(p){
+ if(!p||p.schema!=='iadtx.factory.project.v1'||p.factory_version!==VERSION||!p.state||!Array.isArray(p.history))throw Error('Projeto incompatível com esta Factory.');
+ input(p.input);
+ if(p.state.client!==p.input.client.name||p.state.slug!==slug(p.input.client.name)||!Number.isInteger(p.state.revision)||p.state.revision<0||!['awaiting_human_approval','approved'].includes(p.state.stage))throw Error('Estado do projeto inválido.');
+ if(!p.core||Object.keys(p.core).length!==names.length||names.some(n=>typeof p.core[n]!=='string'||!p.core[n].trim()))throw Error('O CORE precisa conter os 12 artefatos preenchidos.');
+ if(p.history.length!==p.state.revision||p.history.some((h,i)=>!h||h.revision!==i+1||!names.includes(h.artifact)||typeof h.previous!=='string'||typeof h.author!=='string'||typeof h.edited_at!=='string'))throw Error('Histórico do projeto inválido.');
+ return true;
+}
+function edit(p,artifact,text,author){validate(p);if(!names.includes(artifact)||typeof text!=='string'||!text.trim()||!author.trim())throw Error('Informe artefato, conteúdo e responsável.');const next=sanitize(text);if(next===p.core[artifact])return false;
+ p.history.push({revision:p.state.revision+1,artifact,previous:p.core[artifact],author:sanitize(author.trim()),edited_at:now()});p.core[artifact]=next;p.state.revision++;p.state.stage='awaiting_human_approval';p.state.approver=null;p.state.approved_at=null;delete p.state.approved_content_sha256;return true;}
+async function hash(value){const bytes=typeof value==='string'?new TextEncoder().encode(value):value;const digest=await crypto.subtle.digest('SHA-256',bytes);return [...new Uint8Array(digest)].map(x=>x.toString(16).padStart(2,'0')).join('');}
+async function contentHash(p){validate(p);return hash(JSON.stringify(names.map(n=>[n,p.core[n]])));}
+async function approve(p,author){validate(p);if(!author.trim())throw Error('Informe quem revisou o CORE.');p.state.approved_content_sha256=await contentHash(p);p.state.stage='approved';p.state.approver=sanitize(author.trim());p.state.approved_at=now();}
+async function approved(p){return p.state.stage==='approved'&&!!p.state.approver&&!!p.state.approved_at&&p.state.approved_content_sha256===await contentHash(p);}
+async function files(p){validate(p);if(!await approved(p))throw Error('Revise e aprove o conteúdo atual antes de gerar o ZIP.');const result={};for(const n of names)result['core/'+n]=p.core[n];
+ result['README.md']=`# Pacote soberano - ${p.state.client}\n\nI.A.D.T.X Factory v${VERSION}.\n\nComece por core/ARCHITECTURE.md, core/GOVERNANCE.md e core/SYSTEM_PROMPT.md.\nO projeto editável acompanha este pacote. Integrações externas não são ativadas por este ZIP.\n`;
+ result['STATE.json']=JSON.stringify(p.state,null,2)+'\n';result['evidence/INPUT.sanitized.json']=JSON.stringify(p.input,null,2)+'\n';result['PROJECT.json']=JSON.stringify(p,null,2)+'\n';
+ for(const h of p.history){if(!Number.isInteger(h.revision)||h.revision<1||!names.includes(h.artifact)||typeof h.previous!=='string')throw Error('Histórico inválido.');result[`history/${String(h.revision).padStart(4,'0')}/${h.artifact}`]=h.previous;}
+ const entries=[];for(const n of Object.keys(result).sort())entries.push({path:n,bytes:new TextEncoder().encode(result[n]).length,sha256:await hash(result[n])});result['MANIFEST.json']=JSON.stringify({schema:'iadtx.sovereign-package.manifest.v1',factory_version:VERSION,portable:true,entrypoint:'README.md',files:entries},null,2)+'\n';
+ let checks='';for(const n of Object.keys(result).sort())checks+=await hash(result[n])+'  '+n+'\n';result['CHECKSUMS.sha256']=checks;return result;
+}
+// Store-only ZIP with UTF-8 filenames; portable and dependency-free.
+const crcTable=Array.from({length:256},(_,i)=>{let c=i;for(let j=0;j<8;j++)c=c&1?0xedb88320^(c>>>1):c>>>1;return c>>>0;});
+function crc(bytes){let c=0xffffffff;for(const b of bytes)c=crcTable[(c^b)&255]^(c>>>8);return (c^0xffffffff)>>>0;}
+function zip(entries,prefix){const local=[],central=[];let offset=0;const enc=new TextEncoder();
+ for(const path of Object.keys(entries).sort()){const name=enc.encode(prefix+'/'+path),data=enc.encode(entries[path]),checksum=crc(data);const a=new Uint8Array(30+name.length+data.length),v=new DataView(a.buffer);v.setUint32(0,0x04034b50,true);v.setUint16(4,20,true);v.setUint16(6,0x800,true);v.setUint16(12,33,true);v.setUint32(14,checksum,true);v.setUint32(18,data.length,true);v.setUint32(22,data.length,true);v.setUint16(26,name.length,true);a.set(name,30);a.set(data,30+name.length);local.push(a);
+ const b=new Uint8Array(46+name.length),w=new DataView(b.buffer);w.setUint32(0,0x02014b50,true);w.setUint16(4,20,true);w.setUint16(6,20,true);w.setUint16(8,0x800,true);w.setUint16(14,33,true);w.setUint32(16,checksum,true);w.setUint32(20,data.length,true);w.setUint32(24,data.length,true);w.setUint16(28,name.length,true);w.setUint32(42,offset,true);b.set(name,46);central.push(b);offset+=a.length;}
+ const cs=central.reduce((n,a)=>n+a.length,0),end=new Uint8Array(22),ev=new DataView(end.buffer);ev.setUint32(0,0x06054b50,true);ev.setUint16(8,central.length,true);ev.setUint16(10,central.length,true);ev.setUint32(12,cs,true);ev.setUint32(16,offset,true);const all=new Uint8Array(offset+cs+22);let n=0;for(const a of [...local,...central,end]){all.set(a,n);n+=a.length;}return all;
+}
+const api={VERSION,names,sanitize,input,render,compile,validate,edit,hash,approve,approved,files,zip};if(typeof module==='object'&&module.exports)module.exports=api;else root.IADTXFactory=api;
+})(typeof globalThis!=='undefined'?globalThis:this);
+</script>
+<script>/* IADTX Discovery 0.1.0 — governed intake; no model or external service. */
+(function (root) {
+  'use strict';
+  const F = typeof module === 'object' && module.exports ? require('../engine.js') : root.IADTXFactory;
+  const VERSION = '0.1.0', RELEASE = '0.6.0-rc.1', SCHEMA = 'iadtx.discovery.session.v1';
+  const TYPES = ['RELATO', 'FACT', 'INFERENCE', 'HYPOTHESIS', 'UNKNOWN'];
+  const LABELS = {RELATO:'Relato do participante', FACT:'Fato marcado como verificado pelo responsável', INFERENCE:'Inferência', HYPOTHESIS:'Hipótese', UNKNOWN:'Desconhecido'};
+  const orgKeys = ['name','owner','purpose','genealogy','principles','audience','voice','colors','limits'];
+  const findingKeys = ['id','type','claim','source','verification','process','impact','hypothesis','validation','intervention','out_of_scope','responsible','metric','baseline','target','horizon','inaction','expected','assumptions'];
+  const campaignKeys = ['name','duration','price','start','end','deliverables','access','closing','foundation'];
+  const clone = x => JSON.parse(JSON.stringify(x));
+  const now = () => new Date().toISOString();
+  function text(value, label, max = 30000) {
+    if (typeof value !== 'string' || value.length > max) throw Error(label + ': texto inválido ou muito longo.');
+    return value;
+  }
+  function fields(obj, keys, label) {
+    if (!obj || typeof obj !== 'object' || Array.isArray(obj)) throw Error(label + ': objeto inválido.');
+    if (Object.keys(obj).some(k => !keys.includes(k))) throw Error(label + ': campo desconhecido.');
+    return Object.fromEntries(keys.map(k => [k, text(obj[k] ?? '', label + '.' + k)]));
+  }
+  function content(data) {
+    if (!data || typeof data !== 'object' || Array.isArray(data)) throw Error('Conteúdo inválido.');
+    if (Object.keys(data).some(k => !['organization','meeting','findings','campaign'].includes(k))) throw Error('Conteúdo com campo desconhecido.');
+    const organization = fields(data.organization, orgKeys, 'Organização');
+    const meeting = fields(data.meeting, ['notes','source','date'], 'Reunião');
+    const campaign = fields(data.campaign || {}, campaignKeys, 'Campanha');
+    for (const key of ['start','end']) if (campaign[key] && (!/^\d{4}-\d{2}-\d{2}$/.test(campaign[key]) || !Number.isFinite(Date.parse(campaign[key])) || new Date(campaign[key]).toISOString().slice(0,10) !== campaign[key])) throw Error('Data de campanha inválida.');
+    if (campaign.start && campaign.end && campaign.end < campaign.start) throw Error('O encerramento não pode anteceder o início.');
+    if (!Array.isArray(data.findings) || data.findings.length > 50) throw Error('Use até 50 achados por sessão.');
+    const ids = new Set();
+    const findings = data.findings.map(item => {
+      const f = fields(item, findingKeys, 'Achado');
+      if (!/^A[0-9]{3}$/.test(f.id) || ids.has(f.id)) throw Error('IDs de achados inválidos ou repetidos.');
+      ids.add(f.id);
+      if (!TYPES.includes(f.type)) throw Error('Classificação de achado inválida.');
+      return f;
+    });
+    // Credential-shaped keys are rejected above; common token patterns are redacted.
+    // This is not a guarantee that arbitrary secrets in prose can be detected.
+    return F.sanitize({organization, meeting, campaign, findings});
+  }
+  function emptyFinding(id = 'A001') {
+    return Object.fromEntries(findingKeys.map(k => [k, k === 'id' ? id : k === 'type' ? 'RELATO' : '']));
+  }
+  function create() {
+    return {schema:SCHEMA, version:VERSION, created_at:now(), revision:0,
+      content:content({organization:{}, meeting:{}, campaign:{}, findings:[emptyFinding()]}), history:[]};
+  }
+  function validate(session) {
+    if (!session || session.schema !== SCHEMA || session.version !== VERSION) throw Error('Sessão incompatível. Importe o JSON de diagnóstico.');
+    if (!Number.isInteger(session.revision) || session.revision < 0 || session.revision > 500 || !Array.isArray(session.history) || session.history.length !== session.revision) throw Error('Histórico inválido.');
+    text(session.created_at, 'Data');
+    content(session.content);
+    session.history.forEach((h, i) => {
+      if (!h || h.revision !== i + 1 || typeof h.author !== 'string' || !h.author.trim() || typeof h.at !== 'string') throw Error('Revisão inválida.');
+      content(h.previous);
+    });
+    return true;
+  }
+  function restore(raw) {
+    validate(raw);
+    // Whitelist the persisted contract; never import approval or execution claims.
+    return {schema:SCHEMA, version:VERSION, created_at:raw.created_at, revision:raw.revision,
+      content:content(raw.content), history:raw.history.map(h => ({revision:h.revision, author:F.sanitize(h.author), at:h.at, previous:content(h.previous)}))};
+  }
+  function revise(session, next, author) {
+    validate(session);
+    const normalized = content(next);
+    if (JSON.stringify(normalized) === JSON.stringify(session.content)) return false;
+    if (typeof author !== 'string' || !author.trim()) throw Error('Informe quem está registrando a revisão.');
+    if (session.revision >= 500) throw Error('Limite de 500 revisões. Exporte esta sessão antes de iniciar outra.');
+    session.history.push({revision:session.revision + 1, author:F.sanitize(author.trim()), at:now(), previous:clone(session.content)});
+    session.content = normalized; session.revision++;
+    return true;
+  }
+  function gaps(session) {
+    validate(session);
+    const c = content(session.content), o = c.organization, missing = [];
+    for (const [key,label] of [['name','Nome da empresa'],['owner','Dono do CORE'],['purpose','Propósito'],['principles','Princípios e limites não negociáveis']]) {
+      if (!o[key].trim()) missing.push(label);
+    }
+    if (!c.findings.length) missing.push('Pelo menos um achado');
+    for (const f of c.findings) {
+      for (const [key,label] of [['claim','Problema ou observação'],['source','Fonte do achado'],['process','Processo afetado'],['validation','Como verificar a hipótese'],['intervention','Menor entrega verificável']]) {
+        if (!f[key].trim()) missing.push(f.id + ': ' + label);
+      }
+      if (f.type === 'FACT' && !f.verification.trim()) missing.push(f.id + ': evidência da verificação; transcrição isolada comprova apenas o relato');
+    }
+    return missing;
+  }
+  const value = s => s.trim() || 'Não informado — a verificar.';
+  const block = (label, s) => '**' + label + ':** ' + value(s) + '\n\n';
+  function documents(session) {
+    validate(session);
+    const {organization:o,meeting:m,campaign:c,findings} = content(session.content);
+    const header = '# ' + (o.name.trim() || 'Empresa ainda não identificada') + '\n\nDiagnóstico guiado · módulo ' + VERSION + ' · revisão ' + session.revision + '\n\nRASCUNHO — conteúdo informado pelo responsável; sem análise automática por IA ou aprovação do cliente.\n\n';
+    let evidence = header + '## Fontes e registros\n\n' + block('Data da reunião',m.date) + block('Origem das notas',m.source) + '### Notas recebidas\n\n' + value(m.notes) + '\n\n';
+    let diagnosis = header + '## Do micro ao macro\n\n';
+    let prognosis = header + '## Cenários condicionais\n\nAusência de números ou prazos permanece explícita. Estes cenários não são garantias de resultado.\n\n';
+    let scope = header + '## Menor entrega verificável\n\n';
+    for (const f of findings) {
+      const heading = '### ' + f.id + '\n\n';
+      evidence += heading + block('Classificação declarada',LABELS[f.type]) + block('Registro',f.claim) + block('Fonte',f.source) + block('Verificação informada',f.verification);
+      diagnosis += heading + block('Sinal micro',f.claim) + block('Natureza',LABELS[f.type]) + block('Fonte',f.source) + block('Processo afetado',f.process) + block('Impacto macro a verificar',f.impact) + block('Hipótese de causa',f.hypothesis) + block('Próxima pergunta / verificação',f.validation);
+      prognosis += heading + block('Se nada mudar',f.inaction) + block('Com a intervenção proposta',f.expected) + block('Premissas e dependências',f.assumptions) + block('Indicador',f.metric) + block('Linha de base',f.baseline) + block('Meta proposta',f.target) + block('Horizonte proposto',f.horizon);
+      scope += heading + block('Intervenção proposta',f.intervention) + block('Fora do escopo',f.out_of_scope) + block('Responsável proposto',f.responsible) + block('Como verificar',f.validation) + block('Indicador',f.metric);
+    }
+    const campaign = header + '## Proposta de campanha assistida\n\n' + block('Nome',c.name) + block('Duração proposta',c.duration) + block('Preço de referência',c.price) + block('Início proposto',c.start) + block('Encerramento proposto',c.end) + block('Entregas e acompanhamento',c.deliverables) + block('Acesso permitido durante a campanha',c.access) + block('Encerramento, exportação e eventual continuidade',c.closing) + block('Base estrutural declarada',c.foundation) + '\n## Estado do acesso\n\nContrato documental, sem cliente conectado. Prazo não aplicado por este arquivo. MCP operacional exige autenticação por cliente, escopos de ferramentas/dados, relógio e expiração no servidor, revogação e testes de isolamento. Não usar senha escrita no HTML. O pacote do cliente e a propriedade intelectual interna da Factory têm perímetros distintos.\n';
+    return {'EVIDENCIAS.md':evidence,'DIAGNOSTICO.md':diagnosis,'PROGNOSTICO.md':prognosis,'ESCOPO.md':scope,'CAMPANHA.md':campaign};
+  }
+  function toFactory(session, author) {
+    const missing = gaps(session);
+    if (missing.length) throw Error('Complete antes de criar o CORE: ' + missing.join('; '));
+    const c=content(session.content),o=c.organization,items=c.findings,docs=documents(session);
+    const lines = s => s.split('\n').map(x=>x.trim()).filter(Boolean);
+    const project = F.compile({client:{name:o.name.trim(),purpose:o.purpose,audience:o.audience,voice:lines(o.voice),principles:lines(o.principles),colors:lines(o.colors)},processes:items.map(f=>f.id+': '+f.process),rules:lines(o.limits),knowledge:items.map(f=>f.id+': '+f.source)});
+    const philosophy = '\n## Fundamento declarado pelo cliente\n\n'+block('Genealogia',o.genealogy)+block('Dono do CORE',o.owner)+block('Princípios',o.principles)+'Filosofia → Branding → Processos → Arquitetura → IA/Automação. Uma camada inferior não redefine a superior.\n';
+    const trace = '\n## Origem deste rascunho\n\nSessão de diagnóstico '+SCHEMA+' · módulo '+VERSION+' · revisão '+session.revision+'. Conteúdo estruturado por '+value(author)+'. Geração determinística; model_executed=false. Não representa integração, implantação ou aprovação.\n';
+    const annexes = {
+      'BRAND.md':philosophy,
+      'DESIGN.md':'\n## Validação de identidade\n\nAs referências visuais pertencem ao cliente. Lacunas exigem curadoria; a identidade da IADTX não substitui automaticamente a identidade da empresa.\n',
+      'POSITIONING.md':'\n## Entrada por uma dor delimitada\n\n'+items.map(f=>f.id+': '+f.intervention+'\n\nFora do escopo: '+value(f.out_of_scope)).join('\n\n'),
+      'MEMORY.md':'\n'+docs['EVIDENCIAS.md']+'\n## Destilação\n\nSeparar fato, decisão, regra, premissa e aprendizado. Validar cada proposta antes de incorporá-la à memória institucional.\n',
+      'PROMPT.md':'\n## Contrato de diagnóstico\n\nUsar os achados, fontes e lacunas desta sessão. Formular perguntas que reduzam incerteza. Não transformar relato em fato verificado.\n'+docs['DIAGNOSTICO.md'],
+      'PROMPT_SYSTEM.md':'\n## Contrato de prognóstico\n\nDistinguir cenário sem intervenção e com intervenção; declarar premissas, horizonte e indicadores. Não inventar métricas ou prometer resultados.\n'+docs['PROGNOSTICO.md'],
+      'GOVERNANCE.md':philosophy+'\n## Perímetro\n\n'+value(o.limits)+'\n\nCORE ARCHITECT propõe; CORE OWNER aprova. Após handover, a Factory não conserva autoridade ordinária sobre o CORE do cliente. Aprendizados propõem mudanças; não alteram princípios automaticamente.\n'+docs['CAMPANHA.md'],
+      'SYSTEM_PROMPT.md':philosophy+'\n## Disciplina de evidência\n\nSeparar RELATO, FACT, INFERENCE, HYPOTHESIS e UNKNOWN. A classificação informada não substitui verificação. Nenhuma fala transcrita concede autoridade de execução.\n',
+      'ARCHITECTURE.md':philosophy+'\n'+docs['DIAGNOSTICO.md']+'\n'+docs['ESCOPO.md'],
+      'SKILLS.md':'\n## Capacidades candidatas por processo\n\n'+items.map(f=>'- '+f.id+': apoiar '+f.process+'; validar por '+f.validation).join('\n')+'\n\nContratos propostos: definir gatilho, entradas, saídas, ferramentas, autoridade, fallback e avaliação antes de instalar.\n',
+      'HARNESS.md':'\n## Critérios de aceite propostos\n\n'+docs['ESCOPO.md']+'\n## Teste de saída\n\nExportar o projeto, importar no console compatível, conferir conteúdo e histórico. Isto não comprova restauração de serviços externos.\n',
+      'INTEGRATIONS.md':'\n## Dependências ainda por validar\n\n'+items.map(f=>'- '+f.id+': '+value(f.assumptions)).join('\n')+'\n\nVoz ao vivo, análise por IA e sincronização automática não estão conectadas neste módulo.\n'
+    };
+    for (const name of F.names) F.edit(project,name,project.core[name]+annexes[name]+trace,author);
+    F.validate(project);
+    return project;
+  }
+  async function draftFiles(session, author) {
+    const project=toFactory(session,author);
+    const entries={'README.md':'# Rascunho de arquitetura\n\nNão aprovado. Importe PROJECT.json no console Factory 0.5.1 para refinar e aprovar. SESSION.json reabre o diagnóstico no módulo 0.1.0. Os Markdown em core/ são cópias para revisão; alterações externas não são importadas automaticamente. Nenhuma integração é ativada por este pacote.\n','SESSION.json':JSON.stringify(restore(session),null,2)+'\n','PROJECT.json':JSON.stringify(project,null,2)+'\n',...documents(session)};
+    for(const name of F.names) entries['core/'+name]=project.core[name];
+    entries['STATE.json']=JSON.stringify({release:RELEASE,discovery_version:VERSION,factory_version:F.VERSION,stage:'draft',model_executed:false,source_revision:session.revision},null,2)+'\n';
+    const manifest=[];
+    for(const path of Object.keys(entries).sort()) manifest.push({path,sha256:await F.hash(entries[path]),bytes:new TextEncoder().encode(entries[path]).length});
+    entries['MANIFEST.json']=JSON.stringify({schema:'iadtx.discovery.draft-manifest.v1',files:manifest},null,2)+'\n';
+    let checks='';for(const path of Object.keys(entries).sort()) checks+=await F.hash(entries[path])+'  '+path+'\n';
+    entries['CHECKSUMS.sha256']=checks;
+    return entries;
+  }
+  const api={VERSION,RELEASE,SCHEMA,TYPES,LABELS,orgKeys,findingKeys,campaignKeys,create,emptyFinding,validate,restore,content,revise,gaps,documents,toFactory,draftFiles};
+  if(typeof module==='object'&&module.exports) module.exports=api; else root.IADTXDiscovery=api;
+})(typeof globalThis!=='undefined'?globalThis:this);
+</script>
+<script>
+'use strict';
+const D=IADTXDiscovery,F=IADTXFactory,$=s=>document.querySelector(s),LOCAL='iadtx.discovery.session.v1';
+let session=D.create(),draft=structuredClone(session.content),selected=0,dirty=false,busy=false,currentTab='foundation';
+const org=[['name','Nome da empresa','input'],['owner','Quem é o dono do CORE?','input'],['purpose','Propósito / telos','textarea'],['genealogy','Origem e história da empresa','textarea'],['principles','Princípios e limites não negociáveis','textarea'],['limits','Ações permitidas, proibidas e decisões humanas','textarea'],['audience','Público e contexto','textarea'],['voice','Voz da marca — uma orientação por linha','textarea'],['colors','Cores declaradas — uma por linha','input']];
+const meeting=[['date','Data da reunião','date'],['source','Origem das notas ou identificação da gravação','input'],['notes','Notas / transcrição recebida','long']];
+const first=[['type','Natureza do registro','select'],['claim','Problema ou observação micro','textarea'],['source','Fonte: arquivo, trecho ou referência','textarea'],['verification','Se marcou FACT: qual verificação sustenta isso?','textarea'],['process','Processo afetado','input'],['impact','Impacto macro a verificar','textarea']];
+const action=[['hypothesis','Hipótese de causa','textarea'],['validation','Próxima pergunta / como verificar','textarea'],['intervention','Menor entrega verificável','textarea'],['out_of_scope','O que fica fora do escopo','textarea'],['responsible','Responsável proposto','input']];
+const prognosis=[['inaction','Cenário se nada mudar','textarea'],['expected','Cenário com a intervenção','textarea'],['assumptions','Premissas e dependências','textarea'],['metric','Indicador','input'],['baseline','Linha de base — somente se conhecida','input'],['target','Meta proposta','input'],['horizon','Horizonte proposto','input']];
+const campaign=[['name','Nome da campanha','input'],['duration','Duração proposta','input'],['price','Preço de referência','input'],['start','Início proposto','date'],['end','Encerramento proposto','date'],['deliverables','Entregas e acompanhamento','textarea'],['access','O que o cliente poderá acessar','textarea'],['closing','Encerramento, exportação e continuidade','textarea'],['foundation','Base estrutural / referências do núcleo','textarea']];
+function makeFields(target,spec,prefix){const box=$(target);for(const [key,label,kind] of spec){const wrap=document.createElement('label');wrap.className='field'+(kind==='long'?' wide':'');wrap.append(document.createTextNode(label));let el;if(kind==='select'){el=document.createElement('select');for(const type of D.TYPES){const option=document.createElement('option');option.value=type;option.textContent=D.LABELS[type];el.append(option);}}else{el=document.createElement(kind==='textarea'||kind==='long'?'textarea':'input');if(el.tagName==='INPUT')el.type=kind==='date'?'date':'text';if(kind==='long')el.className='long';el.maxLength=30000;}el.id=prefix+key;el.dataset.key=key;wrap.append(el);box.append(wrap);}}
+makeFields('#org-fields',org,'o-');makeFields('#meeting-fields',meeting,'m-');makeFields('#finding-main',first,'f-');makeFields('#finding-action',action,'f-');makeFields('#finding-prognosis',prognosis,'f-');makeFields('#campaign-fields',campaign,'c-');
+function values(spec,prefix){return Object.fromEntries(spec.map(([key])=>[key,$('#'+prefix+key).value]));}
+function collect(){draft.organization=values(org,'o-');draft.meeting=values(meeting,'m-');draft.campaign=values(campaign,'c-');if(draft.findings[selected])draft.findings[selected]={id:draft.findings[selected].id,...values([...first,...action,...prognosis],'f-')};return draft;}
+function fill(spec,prefix,data){for(const [key] of spec)$('#'+prefix+key).value=data[key]||'';}
+function fillAll(){fill(org,'o-',draft.organization);fill(meeting,'m-',draft.meeting);fill(campaign,'c-',draft.campaign);renderFindings();refresh();}
+function renderFindings(){const list=$('#finding-list');list.replaceChildren();draft.findings.forEach((f,i)=>{const button=document.createElement('button');button.className='finding'+(i===selected?' active':'');button.textContent=f.id;button.onclick=()=>run(()=>{collect();selected=i;renderFindings();});list.append(button);});const f=draft.findings[selected];$('#finding-id').textContent=f?f.id:'SEM ACHADO';for(const [key] of [...first,...action,...prognosis]){$('#f-'+key).disabled=!f;$('#f-'+key).value=f?f[key]:'';}$('#remove').disabled=!f;$('#add').disabled=draft.findings.length>=50;}
+function message(text,error=false){$('#message').textContent=text;$('#message').className=error?'error':'';}
+function temporary(){return {...session,content:D.content(collect())};}
+function refresh(){let missing;try{missing=D.gaps(temporary());}catch(e){missing=[e.message];}const box=$('#gaps');box.replaceChildren();const title=document.createElement('strong');title.textContent=missing.length?'Para gerar o CORE, complete:':'Campos mínimos completos. O conteúdo ainda exige revisão humana.';box.append(title);if(missing.length){const ul=document.createElement('ul');for(const gap of missing){const li=document.createElement('li');li.textContent=gap;ul.append(li);}box.append(ul);}$('#core').disabled=busy||missing.length>0;$('#zip').disabled=busy||missing.length>0;$('#state').textContent='REVISÃO '+session.revision+(dirty?' · ALTERAÇÕES A REGISTRAR':' · REGISTRADA')+' · '+draft.findings.length+' ACHADO(S)';}
+function commit(){collect();D.revise(session,draft,$('#author').value);draft=structuredClone(session.content);dirty=false;refresh();}
+function tab(id){collect();currentTab=id;for(const e of document.querySelectorAll('nav .tab'))e.setAttribute('aria-selected',String(e.dataset.tab===id));for(const n of ['foundation','diagnosis','campaign','outputs'])$('#'+n).hidden=n!==id;refresh();if(id==='outputs')renderPreview();}
+async function run(fn){if(busy)return;busy=true;try{await fn();}catch(e){message(e.message,true);}finally{busy=false;refresh();}}
+function download(data,name,type){const url=URL.createObjectURL(new Blob([data],{type})),a=document.createElement('a');a.href=url;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(url),1500);}
+function filename(){return (draft.organization.name.normalize('NFKD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'')||'empresa')+'-diagnostico-r'+session.revision;}
+function renderPreview(){const docs=D.documents(temporary()),select=$('#document'),previous=select.value;select.replaceChildren();for(const name of Object.keys(docs)){const option=document.createElement('option');option.value=name;option.textContent=name;select.append(option);}if(previous in docs)select.value=previous;$('#preview').value=docs[select.value];}
+for(const button of document.querySelectorAll('nav .tab'))button.onclick=()=>run(()=>tab(button.dataset.tab));
+for(const button of document.querySelectorAll('[data-next]'))button.onclick=()=>run(()=>tab(button.dataset.next));
+document.addEventListener('input',e=>{if(e.target.matches('input,textarea,select')&&!['file','document','preview'].includes(e.target.id)){dirty=true;refresh();}});
+$('#add').onclick=()=>run(()=>{collect();if(draft.findings.length>=50)throw Error('Limite de 50 achados.');const all=[...draft.findings,...session.history.flatMap(h=>h.previous.findings)];const max=Math.max(0,...all.map(f=>Number(f.id.slice(1))));if(max>=999)throw Error('Limite de identificadores. Inicie outra sessão.');draft.findings.push(D.emptyFinding('A'+String(max+1).padStart(3,'0')));selected=draft.findings.length-1;dirty=true;renderFindings();});
+$('#remove').onclick=()=>run(()=>{collect();if(!draft.findings[selected]||!confirm('Remover este achado do rascunho atual? Revisões já registradas permanecem no histórico.'))return;draft.findings.splice(selected,1);selected=Math.max(0,selected-1);dirty=true;renderFindings();});
+$('#new').onclick=()=>run(()=>{if((dirty||session.revision)&&!confirm('Iniciar outra sessão? Exporte o JSON antes para preservar o trabalho atual.'))return;session=D.create();draft=structuredClone(session.content);selected=0;dirty=false;fillAll();tab('foundation');message('Nova sessão, sem dados de outro cliente.');});
+$('#session').onclick=()=>run(()=>{commit();download(JSON.stringify(D.restore(session),null,2)+'\n',filename()+'.json','application/json');message('Sessão exportada com conteúdo e histórico.');});
+$('#core').onclick=()=>run(()=>{commit();const project=D.toFactory(session,$('#author').value);download(JSON.stringify(project,null,2)+'\n',filename()+'-PROJECT.json','application/json');message('Projeto criado. Importe no console Factory 0.5.1 para refinar e aprovar.');});
+$('#zip').onclick=()=>run(async()=>{commit();const entries=await D.draftFiles(session,$('#author').value);download(F.zip(entries,filename()),filename()+'-rascunho.zip','application/zip');message('Rascunho exportado com documentos, sessão, projeto e checksums.');});
+$('#document').onchange=renderPreview;
+$('#markdown').onclick=()=>run(()=>{commit();renderPreview();download($('#preview').value,$('#document').value,'text/markdown;charset=utf-8');message('Documento exportado como rascunho.');});
+$('#campaign-example').onclick=()=>run(()=>{collect();const defaults={duration:'15 dias',price:'R$ 1.000 — referência inicial proposta',deliverables:'Uma campanha delimitada, com acompanhamento assistido e revisão do resultado.',access:'A definir por cliente: ferramentas e dados necessários à campanha; operação conectada limitada ao período contratado.',closing:'Encerrar o acesso à operação conectada, entregar os registros acordados e propor continuidade somente mediante novo escopo.',foundation:'IADTX: filosofia, branding, processos, arquitetura e IA/automação.'};for(const [key,v]of Object.entries(defaults))if(!draft.campaign[key].trim())draft.campaign[key]=v;fill(campaign,'c-',draft.campaign);dirty=true;message('Referência preenchida. Defina datas, entregas e acesso do cliente.');});
+$('#import').onclick=()=>$('#file').click();
+$('#file').onchange=()=>run(async()=>{try{const file=$('#file').files[0];if(!file)return;if(file.size>5*1024*1024)throw Error('Use uma sessão JSON de até 5 MB.');const incoming=D.restore(JSON.parse(await file.text()));if((dirty||session.revision)&&!confirm('Substituir a sessão aberta? Exporte o JSON atual antes se precisar preservá-lo.'))return;session=incoming;draft=structuredClone(session.content);selected=0;dirty=false;fillAll();if(currentTab==='outputs')renderPreview();message('Sessão retomada com histórico. Nenhuma aprovação foi importada.');}finally{$('#file').value='';}});
+function localStatus(){try{$('#local-status').textContent=localStorage.getItem(LOCAL)?'Há uma cópia neste navegador.':'Nenhuma cópia guardada neste navegador.';}catch{$('#local-status').textContent='Este navegador não permite guardar a cópia local.';}}
+$('#store').onclick=()=>run(()=>{commit();const data=JSON.stringify(D.restore(session));if(new TextEncoder().encode(data).length>5*1024*1024)throw Error('Exporte o JSON: a sessão excedeu o limite da cópia local.');localStorage.setItem(LOCAL,data);localStatus();message('Cópia guardada somente neste navegador. Exporte o JSON para ter outra cópia.');});
+$('#restore').onclick=()=>run(()=>{const data=localStorage.getItem(LOCAL);if(!data)throw Error('Nenhuma cópia local encontrada.');const incoming=D.restore(JSON.parse(data));if((dirty||session.revision)&&!confirm('Substituir a sessão aberta pela cópia local?'))return;session=incoming;draft=structuredClone(session.content);selected=0;dirty=false;fillAll();renderPreview();message('Cópia local retomada.');});
+$('#forget').onclick=()=>run(()=>{if(!confirm('Apagar a cópia guardada neste navegador? A sessão aberta e os arquivos exportados permanecem disponíveis.'))return;localStorage.removeItem(LOCAL);localStatus();message('Cópia local apagada.');});
+window.addEventListener('beforeunload',e=>{if(dirty){e.preventDefault();e.returnValue='';}});
+fillAll();localStatus();
+</script><script>
+'use strict';
+const COMPANY_STORE='iadtx.factory.company-baselines.v1';
+function companyLibrary(){const raw=localStorage.getItem(COMPANY_STORE);if(!raw)return [];const list=JSON.parse(raw);if(!Array.isArray(list)||list.length>100)throw Error('Biblioteca local inválida.');return list;}
+const workspace=document.createElement('section');workspace.className='panel';workspace.style.marginBottom='20px';
+const workspaceTitle=document.createElement('h2');workspaceTitle.textContent='Bancada de microproblemas';workspace.append(workspaceTitle);
+const workspaceIntro=document.createElement('p');workspaceIntro.textContent='Uma empresa, uma dor e uma entrega verificável. Retome suas baselines neste aparelho ou compartilhe uma revisão para arquivá-la no Drive pelo assistente.';workspace.append(workspaceIntro);
+const clientLabel=document.createElement('label');clientLabel.className='field';clientLabel.textContent='Baselines guardadas neste navegador';const clientSelect=document.createElement('select');clientSelect.id='company-baselines';clientLabel.append(clientSelect);workspace.append(clientLabel);
+const clientActions=document.createElement('div');clientActions.className='actions';workspace.append(clientActions);
+function clientButton(id,label){const b=document.createElement('button');b.id=id;b.className='button';b.textContent=label;clientActions.append(b);return b;}
+const saveCompany=clientButton('save-company','Guardar baseline neste aparelho'),loadCompany=clientButton('load-company','Retomar baseline'),shareCompany=clientButton('share-company','Compartilhar para arquivar no Drive');
+const refine=document.createElement('a');refine.href='./factory-refinamento.html';refine.target='_blank';refine.rel='noopener';refine.className='button cyan';refine.textContent='Abrir refinamento do CORE';clientActions.append(refine);
+const scopeNote=document.createElement('p');scopeNote.className='hint';scopeNote.textContent='A biblioteca acima fica neste navegador. Para arquivar no Drive, compartilhe a sessão com o ChatGPT e peça o registro na pasta da empresa. A página não tem conexão direta com seu Drive.';workspace.append(scopeNote);
+document.querySelector('nav').before(workspace);
+function listCompanies(){clientSelect.replaceChildren();const empty=document.createElement('option');empty.value='';empty.textContent='Selecione uma revisão';clientSelect.append(empty);try{for(const item of companyLibrary().slice().reverse()){const option=document.createElement('option');option.value=item.key;option.textContent=item.company+' · revisão '+item.session.revision+' · '+new Date(item.saved_at).toLocaleString('pt-BR');clientSelect.append(option);}}catch(e){message(e.message,true);}}
+saveCompany.onclick=()=>run(()=>{commit();const name=session.content.organization.name.trim();if(!name)throw Error('Informe a empresa antes de guardar a baseline.');const list=companyLibrary();if(list.length>=100)throw Error('Limite de 100 revisões locais. Exporte suas sessões antes de limpar o armazenamento do navegador.');list.push({key:crypto.randomUUID(),company:name,saved_at:new Date().toISOString(),session:D.restore(session)});const raw=JSON.stringify(list);if(new TextEncoder().encode(raw).length>4*1024*1024)throw Error('Exporte a sessão: a biblioteca local está cheia.');localStorage.setItem(COMPANY_STORE,raw);listCompanies();message('Baseline guardada neste navegador. Nenhuma gravação no Drive foi realizada.');});
+loadCompany.onclick=()=>run(()=>{const item=companyLibrary().find(x=>x.key===clientSelect.value);if(!item)throw Error('Selecione uma revisão guardada.');const incoming=D.restore(item.session);if((dirty||session.revision)&&!confirm('Retomar esta baseline? Exporte a sessão atual se quiser preservá-la.'))return;session=incoming;draft=structuredClone(session.content);selected=0;dirty=false;fillAll();if(currentTab==='outputs')renderPreview();message('Baseline da empresa retomada neste navegador.');});
+shareCompany.onclick=()=>run(async()=>{commit();const name=session.content.organization.name.trim();if(!name)throw Error('Informe a empresa antes de compartilhar.');const payload=JSON.stringify(D.restore(session),null,2)+'\n';const file=new File([payload],filename()+'.json',{type:'application/json'});const request='/micro arquivar baseline da empresa '+JSON.stringify(name)+' no Drive IADTX. Use a sessão JSON anexada. Localize ou crie a pasta da empresa; registre uma nova revisão, preserve anteriores e devolva os links depois de conferir o destino.';
+ if(navigator.canShare&&navigator.canShare({files:[file]})){try{await navigator.share({files:[file],title:'Baseline IADTX — '+name,text:request});message('Sessão compartilhada. O arquivamento no Drive precisa ser executado e confirmado pelo assistente.');return;}catch(e){if(e.name==='AbortError'){message('Compartilhamento cancelado. A sessão permanece aberta.');return;}}}
+ download(payload,filename()+'.json','application/json');try{await navigator.clipboard.writeText(request);message('JSON preparado e pedido copiado. Anexe o JSON no ChatGPT e cole o pedido para arquivar no Drive.');}catch{message('JSON preparado. Anexe no ChatGPT e peça: /micro arquivar baseline de '+name+' no Drive IADTX.');}
+});
+listCompanies();
+
+</script></body></html>
